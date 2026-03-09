@@ -114,10 +114,10 @@
       <p class="page-intro">
         Most dating apps today feel like work. We built Serene to take the
         opposite approach. This page is the capstone log: research, MVP
-        scope, design, implementation, integration, and TestFlight beta. I
-        (Justin) handled product, design, and frontend; Andriy handled
-        backend. We coordinated weekly and connected the frontend and backend
-        together near the end of the quarter.
+        scope, design, implementation, integration, and TestFlight beta.
+        Justin led product, design, and frontend. Andriy led backend and systems. We
+        coordinated weekly and connected the frontend and backend together
+        near the end of the quarter.
       </p>
 
       <section class="content-section fade-in">
@@ -127,7 +127,7 @@
           like Hinge and Coffee Meets Bagel. Conversations fade. People
           overthink their profiles. Apps are designed around engagement, not
           meeting in real life. We used that to position Serene: college
-          students 18–26, real profiles, meet IRL.
+          students 18 to 26, real profiles, meet IRL.
         </p>
 
         <!-- IMAGE NEEDED: Survey/interview summary. Replace placeholder with <img src="assets/images/serene-fig-a1-research-summary.png" alt="..." loading="lazy"> -->
@@ -138,7 +138,7 @@
         <p class="artifact-annotation">
           The summary captured why people leave other apps: curated profiles,
           dead-end chats. We used it to lock in Polaroid-first onboarding and
-          “meet IRL” as the north star. Design and scope decisions referred
+          meet IRL as the north star. Design and scope decisions referred
           back to these themes.
         </p>
 
@@ -160,7 +160,7 @@
           Our explicit goals: design and prototype the experience, build an
           iOS app, validate with real college students. We used a waitlist
           strategy and the dubmatch.com waitlist site. We mapped the full
-          user flow and kept scope tight—profile (Polaroid + basics),
+          user flow and kept scope tight: profile (Polaroid + basics),
           discovery, match, one IRL meet with safety guardrails.
         </p>
 
@@ -189,12 +189,14 @@
 
       <section class="content-section fade-in">
         <h2>UI/UX Design in Figma (Justin)</h2>
+        <!-- COPY LOCK START: canonical -->
         <p>
-          I used short steps so the flow never felt overwhelming. I
-          explained why location and notifications were needed. I used
-          Polaroids and kept the interface minimal. I designed the flow to
-          build trust without extra friction.
+          Justin led the Figma UI/UX design: short steps so the flow never
+          felt overwhelming, clear rationale for location and notifications,
+          Polaroids, and a minimal interface designed to build trust without
+          extra friction.
         </p>
+        <!-- COPY LOCK END: canonical -->
 
         <!-- IMAGE NEEDED: Early wireframes vs refined screens. Replace placeholder with <img src="assets/images/serene-fig-c1-wireframes-vs-final.png" alt="..." loading="lazy"> -->
         <figure class="artifact">
@@ -204,8 +206,7 @@
         <p class="artifact-annotation">
           Early wireframes had too many steps. The refined version collapsed
           explanation and capture into a single sequence. The comparison
-          shows the pivot from “explain everything” to “show once, then
-          capture.”
+          shows the pivot from explain everything to show once, then capture.
         </p>
 
         <!-- IMAGE NEEDED: Onboarding trust flow (location/notifications + Polaroids). Replace placeholder with <img src="assets/images/serene-fig-c2-onboarding-trust-flow.png" alt="..." loading="lazy"> -->
@@ -216,19 +217,21 @@
         <p class="artifact-annotation">
           This flow explained why location and notifications were needed and
           placed the Polaroid step so users understood why a real photo
-          mattered. I designed it to build trust. We kept it in the SwiftUI
-          build with minimal change.
+          mattered. The flow was designed to build trust. We kept it in the
+          SwiftUI build with minimal change.
         </p>
       </section>
 
       <section class="content-section fade-in">
         <h2>iOS Frontend Implementation (SwiftUI) (Justin)</h2>
+        <!-- COPY LOCK START: canonical -->
         <p>
-          I built the app in Xcode with SwiftUI. I used reusable UI patterns
-          and kept it iOS-native. I integrated Apple Maps for “nearby” and
-          meet guidance and followed Apple’s HCI guidance (including liquid
-          glass where it fit). I wired the app to the backend API.
+          Justin led the SwiftUI frontend and Apple Maps integration. The app
+          used reusable UI patterns, stayed iOS-native, and followed Apple HCI
+          guidance (including liquid glass where it fit). We wired it to the
+          backend API.
         </p>
+        <!-- COPY LOCK END: canonical -->
 
         <!-- IMAGE NEEDED: SwiftUI navigation/state architecture diagram or code screenshot. Replace placeholder with <img src="assets/images/serene-fig-d1-swiftui-architecture.png" alt="..." loading="lazy"> -->
         <figure class="artifact">
@@ -236,7 +239,7 @@
           <figcaption>Figure D1. SwiftUI navigation and state architecture, or code screenshot showing view structure.</figcaption>
         </figure>
         <p class="artifact-annotation">
-          I structured navigation and state around discovery, profile, and
+          Navigation and state were structured around discovery, profile, and
           meet flow. The separation made it easier to plug in API calls and
           location updates. We refactored once when the meet flow gained
           states like pending, confirmed, expired.
@@ -249,20 +252,22 @@
         </figure>
         <p class="artifact-annotation">
           Apple Maps showed nearby users (within the backend radius) and
-          supported the “meet IRL” step with directions. I balanced privacy—
-          no persistent precise location—with enough detail for “who’s
-          around” and meet confirmation.
+          supported the meet IRL step with directions. The team balanced
+          privacy (no persistent precise location) with enough detail for
+          who is around and meet confirmation.
         </p>
       </section>
 
       <section class="content-section fade-in">
         <h2>Backend Architecture and Data (Flask + Supabase) (Andriy)</h2>
+        <!-- COPY LOCK START: canonical -->
         <p>
-          Andriy built the Flask REST API and used Supabase/Postgres for
-          persistence. The architecture supported auth, profiles, matches,
-          and meeting/safety data. We aligned on request/response shapes
-          early so the iOS client could integrate without guesswork.
+          Andriy led the Flask API and Supabase data model. The architecture
+          supported auth, profiles, matches, and meeting/safety data. We
+          aligned on request/response shapes early so the iOS client could
+          integrate without guesswork.
         </p>
+        <!-- COPY LOCK END: canonical -->
 
         <!-- IMAGE NEEDED: API architecture diagram. Replace placeholder with <img src="assets/images/serene-fig-e1-backend-architecture.png" alt="..." loading="lazy"> -->
         <figure class="artifact">
@@ -289,12 +294,14 @@
 
       <section class="content-section fade-in">
         <h2>Matchmaking, Proximity Engine, and Safety (Backend + Product)</h2>
+        <!-- COPY LOCK START: canonical -->
         <p>
-          Andriy built the proximity engine (Haversine) and match score logic
+          Andriy led the proximity engine (Haversine) and match score logic
           with dealbreakers. Product and backend agreed on radius and refresh
           behavior. Safety: 30-minute meeting window, QR check-in, and
           expiration so both sides have a clear, bounded frame.
         </p>
+        <!-- COPY LOCK END: canonical -->
 
         <!-- IMAGE NEEDED: Proximity engine diagram/pseudocode. Replace placeholder with <img src="assets/images/serene-fig-f1-proximity-engine.png" alt="..." loading="lazy"> -->
         <figure class="artifact">
@@ -302,7 +309,7 @@
           <figcaption>Figure F1. Proximity engine (Haversine): diagram or pseudocode for location-based discovery.</figcaption>
         </figure>
         <p class="artifact-annotation">
-          Haversine gave us “who’s nearby” at campus scale without heavy GIS.
+          Haversine gave us who is nearby at campus scale without heavy GIS.
           We tuned the radius and how often the client refreshed. The diagram
           is the reference for the logic.
         </p>
@@ -314,7 +321,7 @@
         </figure>
         <p class="artifact-annotation">
           The flow made the meeting window and check-in mandatory so both
-          parties opt in. Expiration cleared stale “pending” states. We kept
+          parties opt in. Expiration cleared stale pending states. We kept
           the description factual and did not over-claim.
         </p>
       </section>
@@ -346,18 +353,18 @@
         </figure>
         <p class="artifact-annotation">
           Testers said Polaroid and the meet flow felt different from typical
-          apps. Confusion centered on when to enable location and what
-          “nearby” meant. We adjusted copy and one onboarding step. The
-          notes document what we changed and why.
+          apps. Confusion centered on when to enable location and what nearby
+          meant. We adjusted copy and one onboarding step. The notes document
+          what we changed and why.
         </p>
       </section>
 
       <p class="content-section what-i-learned">
-        What I learned: doing the full loop—research, scope, design,
-        implementation, integration, beta—taught me to make decisions under
-        constraints and iterate from feedback instead of assumptions.
-        Aligning with Andriy on API and safety early prevented rework later.
-        These artifacts are the log of that progression.
+        What we learned: doing the full loop (research, scope, design,
+        implementation, integration, beta) taught the team to make decisions
+        under constraints and iterate from feedback instead of assumptions.
+        Aligning on API and safety early prevented rework later. These
+        artifacts are the log of that progression.
       </p>
     </main>
 

@@ -1,0 +1,15 @@
+---
+description: Respect COPY LOCK blocks and use copy-bank.md for Serene wording
+alwaysApply: true
+---
+
+# Copy lock and canonical copy
+
+Before editing, check for COPY LOCK blocks.
+
+- If a block is inside `<!-- COPY LOCK START: canonical -->` and `<!-- COPY LOCK END: canonical -->`, do not edit it.
+- Only edit unlocked blocks.
+- Prefer verbatim wording from `copy-bank.md` for any Serene description.
+- Do not paraphrase canonical phrases unless needed for POV (The User page must be 2nd person).
+
+Locked sections in HTML must not be edited unless COPY LOCK tags are removed (see note at top of `copy-bank.md`).
