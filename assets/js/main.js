@@ -37,10 +37,15 @@
 
   /* --- Active Link Highlighting --- */
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
+  const overallCapstoneSubpages = ["overall-capstone-justin.html", "overall-capstone-andriy.html"];
 
   document.querySelectorAll(".nav-list a").forEach(function (link) {
     const href = link.getAttribute("href");
-    if (href === currentPath || (currentPath === "" && href === "index.html")) {
+    const isActive =
+      href === currentPath ||
+      (currentPath === "" && href === "index.html") ||
+      (href === "overall-capstone.html" && overallCapstoneSubpages.indexOf(currentPath) !== -1);
+    if (isActive) {
       link.setAttribute("aria-current", "page");
     }
   });
