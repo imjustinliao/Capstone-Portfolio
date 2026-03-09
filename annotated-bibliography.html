@@ -110,112 +110,86 @@
 
     <!-- ========== Main Content ========== -->
     <main id="main" class="site-main">
-      <div class="note-box note-top" role="note">
-        <p>Next step: We will paste our Zotero export or resource links, then convert them into APA format and sort alphabetically within each theme.</p>
-      </div>
-
       <h1 class="page-title">Annotated Bibliography</h1>
       <p class="page-intro">
-        We grouped the resources below by theme to show how our team learned
-        the tools and methods used while building Serene. Each theme has a
-        short annotation; sources will be added as links and then formatted
-        in APA and sorted within each theme.
+        We grouped the resources below by theme to show how we learned the
+        tools and methods used while building Serene. Each theme has a
+        short annotation and APA-formatted entries sorted alphabetically.
       </p>
 
       <section class="content-section fade-in">
-        <h2>Backend APIs and Supabase</h2>
+        <h2>Backend APIs and HTTP</h2>
         <p class="theme-annotation">
-          Andriy led the Flask API and Supabase data model. We used official
-          docs and REST/API design sources to align request/response shapes
-          with the iOS client and to structure endpoints for discovery,
-          matching, and meet lifecycle. This section will list those sources.
+          We used Flask and REST API patterns plus HTTP methods to structure
+          endpoints and communicate with the iOS app. These sources guided
+          how we defined request and response shapes and chose the right
+          verbs for each action.
         </p>
-        <p class="sources-label">Sources to add (paste links here):</p>
         <ul class="bib-list">
-          <li>[LINK TBD]</li>
-          <li>[LINK TBD]</li>
-          <li>[LINK TBD]</li>
-          <li>[LINK TBD]</li>
-          <li>[LINK TBD]</li>
+          <li>Flask Documentation. (2024). <cite>Flask web development documentation</cite>. <a href="https://flask.palletsprojects.com/" target="_blank" rel="noopener noreferrer">https://flask.palletsprojects.com/</a></li>
+          <li>Grinberg, M. (2018). <cite>Flask web development: Developing web applications with Python</cite>. O'Reilly Media.</li>
+          <li>Mozilla Developer Network. (2023). <cite>HTTP request methods</cite>. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods" target="_blank" rel="noopener noreferrer">https://developer.mozilla.org/</a></li>
         </ul>
       </section>
 
       <section class="content-section fade-in">
-        <h2>iOS Development and SwiftUI</h2>
+        <h2>Database and Authentication (Supabase)</h2>
         <p class="theme-annotation">
-          Justin led the SwiftUI frontend and Apple Maps integration. We used
-          Apple docs and HIG for navigation, state, MapKit, and permission
-          flows (location, notifications). Links will be added for docs and
-          tutorials the team used.
+          These sources helped us learn how to store and manage user data
+          using Supabase. We used them while setting up authentication,
+          creating database tables, and connecting the backend to the
+          database. They also helped us understand how Supabase handles
+          security and user sessions.
         </p>
-        <p class="sources-label">Sources to add (paste links here):</p>
         <ul class="bib-list">
-          <li>[LINK TBD]</li>
-          <li>[LINK TBD]</li>
-          <li>[LINK TBD]</li>
-          <li>[LINK TBD]</li>
-          <li>[LINK TBD]</li>
+          <li>Supabase. (2023). <cite>Authentication guide</cite>. <a href="https://supabase.com/docs/guides/auth" target="_blank" rel="noopener noreferrer">https://supabase.com/docs/guides/auth</a></li>
+          <li>Supabase. (2024). <cite>Supabase documentation</cite>. <a href="https://supabase.com/docs" target="_blank" rel="noopener noreferrer">https://supabase.com/docs</a></li>
         </ul>
       </section>
 
       <section class="content-section fade-in">
-        <h2>Location, Maps, and Geospatial Computation</h2>
+        <h2>iOS Development, Design, and UI</h2>
         <p class="theme-annotation">
-          Andriy led the proximity engine (Haversine). We used MapKit and
-          geospatial docs to implement and tune proximity logic and to handle
-          location permissions and privacy. This section will list MapKit,
-          Core Location, Haversine, and related sources.
+          We used Apple documentation and the Human Interface Guidelines to
+          learn SwiftUI patterns and follow platform design guidance. We
+          also used them to implement Liquid Glass carefully without hurting
+          readability.
         </p>
-        <p class="sources-label">Sources to add (paste links here):</p>
         <ul class="bib-list">
-          <li>[LINK TBD]</li>
-          <li>[LINK TBD]</li>
-          <li>[LINK TBD]</li>
-          <li>[LINK TBD]</li>
-          <li>[LINK TBD]</li>
+          <li>Apple. (n.d.). <cite>Apple Developer Documentation</cite>. <a href="https://developer.apple.com/documentation/" target="_blank" rel="noopener noreferrer">https://developer.apple.com/documentation/</a></li>
+          <li>Apple. (n.d.). <cite>Human Interface Guidelines</cite>. <a href="https://developer.apple.com/design/human-interface-guidelines" target="_blank" rel="noopener noreferrer">https://developer.apple.com/design/human-interface-guidelines</a></li>
+          <li>Apple. (n.d.). <cite>Liquid Glass</cite>. <a href="https://developer.apple.com/documentation/TechnologyOverviews/liquid-glass" target="_blank" rel="noopener noreferrer">https://developer.apple.com/documentation/TechnologyOverviews/liquid-glass</a></li>
+          <li>YouTube. (n.d.). <cite>[Video]</cite>. <a href="https://youtu.be/Odtp_sCDNHg?si=vhxJDRHoRqHS6066" target="_blank" rel="noopener noreferrer">https://youtu.be/Odtp_sCDNHg?si=vhxJDRHoRqHS6066</a></li>
         </ul>
       </section>
 
       <section class="content-section fade-in">
-        <h2>Safety, Privacy, and Trust Design</h2>
+        <h2>Location-Based Services</h2>
         <p class="theme-annotation">
-          We designed for bounded meetups (30-minute window, QR check-in),
-          optional location sharing with trusted contacts, and real photo
-          capture. We used safety and trust-design sources to shape the flow
-          without over-claiming. This section will list those sources.
+          Because Serene is designed to connect users who are physically
+          near each other, we needed to research how location-based systems
+          work. These sources helped us understand how to handle geolocation
+          data and how apps can determine when users are close enough to
+          interact.
         </p>
-        <p class="sources-label">Sources to add (paste links here):</p>
         <ul class="bib-list">
-          <li>[LINK TBD]</li>
-          <li>[LINK TBD]</li>
-          <li>[LINK TBD]</li>
-          <li>[LINK TBD]</li>
-          <li>[LINK TBD]</li>
+          <li>Google Developers. (2023). <cite>Geolocation API documentation</cite>. <a href="https://developers.google.com/maps/documentation" target="_blank" rel="noopener noreferrer">https://developers.google.com/maps/documentation</a></li>
+          <li>MDN Web Docs. (2023). <cite>Geolocation API</cite>. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API" target="_blank" rel="noopener noreferrer">https://developer.mozilla.org/</a></li>
         </ul>
       </section>
 
       <section class="content-section fade-in">
-        <h2>UX Research and Product Strategy</h2>
+        <h2>Testing and Release Workflow (TestFlight)</h2>
         <p class="theme-annotation">
-          We used UX research and product strategy to scope the problem
-          (college dating, authenticity, IRL meetups), run lightweight
-          research, and prioritize MVP features. Those sources informed
-          real photos in onboarding and meeting in person as the main goal.
-          This section will list them.
+          We used TestFlight documentation to understand iOS beta
+          distribution and how builds are shared for testing during
+          development.
         </p>
-        <p class="sources-label">Sources to add (paste links here):</p>
         <ul class="bib-list">
-          <li>[LINK TBD]</li>
-          <li>[LINK TBD]</li>
-          <li>[LINK TBD]</li>
-          <li>[LINK TBD]</li>
-          <li>[LINK TBD]</li>
+          <li>Apple. (n.d.). <cite>TestFlight</cite>. <a href="https://developer.apple.com/testflight/" target="_blank" rel="noopener noreferrer">https://developer.apple.com/testflight/</a></li>
         </ul>
       </section>
 
-      <div class="note-box" role="note">
-        <p><strong>Image sources.</strong> If any diagrams or screenshots are included on Capstone Experience, captions reference Figures. All figures include alt text for accessibility.</p>
-      </div>
     </main>
 
     <!-- ========== Footer ========== -->
