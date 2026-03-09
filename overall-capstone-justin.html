@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="assets/logo%20white.png" />
-    <title>Overall Capstone — Justin Liao</title>
+    <title>Overall Capstone  Justin Liao &mdash; Serene</title>
     <!-- Anti-flash: apply saved theme before first paint -->
     <script>
       (function () {
@@ -110,62 +110,122 @@
 
     <!-- ========== Main Content ========== -->
     <main id="main" class="site-main">
+      <p class="back-link"><a href="overall-capstone.html">Back to Overall Capstone</a></p>
       <h1 class="page-title">Overall Capstone  Justin Liao</h1>
-      <p class="back-link-wrap"><a href="overall-capstone.html" class="back-link">Back to Overall Capstone</a></p>
 
       <section class="content-section fade-in">
         <h2>Starting Point</h2>
         <p>
-          I came into the capstone with design experience and some Swift; Serene pushed me to own the full frontend and product side. [TODO: Justin reflection input]
+          I came into the capstone wanting to own product direction and the
+          user-facing experience. Our team chose to build Serene, a dating
+          app for college students that pushes toward meeting in real life
+          instead of endless swiping. I took the lead on product, design,
+          and frontend. Andriy owned the backend and systems. From the start
+          we agreed on a tight scope: real profiles with Polaroids,
+          location-based discovery, and one IRL meet with safety guardrails.
+          That framing let me focus on the flow users would actually see and
+          touch.
         </p>
       </section>
 
       <section class="content-section fade-in">
         <h2>Turning Research into Decisions</h2>
         <p>
-          Research and competitive analysis drove our bet on Polaroid-first profiles and location-based discovery. I turned survey and interview insights into concrete product and design choices. [TODO: Justin reflection input]
+          We ran stakeholder interviews and surveys and looked at apps like
+          Hinge and Coffee Meets Bagel. What stuck with me was how often
+          conversations faded and how much people overthought their
+          profiles. Apps were built for engagement, not for meeting in real
+          life. I used that to argue for Polaroid-first onboarding and meet
+          IRL as the north star. We positioned for college students 18 to 26
+          and bet on proximity-based discovery instead of copying swipe
+          mechanics. The research gave me a clear basis to cut scope and say
+          no to deeper in-app chat so we could ship one coherent story.
         </p>
       </section>
 
       <section class="content-section fade-in">
         <h2>Building the Frontend Under Constraints</h2>
         <p>
-          Time and team size meant we had to cut scope. I focused on onboarding, discovery, and the meet flow in Figma and SwiftUI and made tradeoffs when features threatened the ship date. [TODO: Justin reflection input]
+          I led the Figma design and then the SwiftUI build and Apple Maps
+          integration. The main constraint was time: we had to ship an iOS
+          app that could talk to Andriy’s API and still feel focused. I
+          kept the flow in short steps so it never felt overwhelming and
+          gave clear rationale for location and notifications. Early
+          wireframes had too many steps. I collapsed them into a single
+          sequence: show once, then capture. In SwiftUI I structured
+          navigation and state around discovery, profile, and meet flow.
+          When the meet flow gained states like pending, confirmed, and
+          expired, I refactored so the frontend could stay in sync with the
+          backend without guesswork.
         </p>
       </section>
 
       <section class="content-section fade-in">
         <h2>Collaboration and Coordination</h2>
         <p>
-          Andriy and I coordinated weekly and aligned on API contracts and safety behavior early. Clear handoffs and shared language mattered when we integrated the iOS app with the backend. [TODO: Justin reflection input]
+          Andriy and I coordinated weekly. We mapped the full user flow
+          early so design and backend could stay aligned. He used that flow
+          to define API endpoints and safety checks. I wired the app to his
+          backend near the end of the quarter. Aligning on request and
+          response shapes and on safety behavior up front meant we did not
+          have to rework the client when his API changed. I learned that
+          spending time on the handoff pays off. We did not merge frontend
+          and backend until we had a clear checklist, and that kept
+          integration predictable.
         </p>
       </section>
 
       <section class="content-section fade-in">
         <h2>Testing and Iteration</h2>
         <p>
-          We used TestFlight for beta and iterated on copy and one onboarding step based on feedback. [TODO: Justin reflection input]
+          We shipped to beta testers via TestFlight and ran through a
+          checklist for auth, discovery, match, meet, and safety. Testers
+          said the Polaroid and meet flow felt different from typical apps.
+          The confusion we heard was about when to enable location and what
+          nearby meant. We adjusted copy and one onboarding step in response.
+          I had to let go of how I thought the flow should be explained and
+          follow what actually confused people. We did not collect formal
+          metrics. The iteration was qualitative: we changed what testers
+          pointed at and documented why.
         </p>
       </section>
 
       <section class="content-section fade-in">
         <h2>What I Learned</h2>
         <p>
-          Doing the full loop from research to shipped beta taught me to make decisions under constraints and iterate from feedback. [TODO: Justin reflection input]
+          Doing the full loop from research to scope to design to
+          implementation to integration to beta taught me to make decisions
+          under constraints. I learned to use research to justify cuts and to
+          iterate from feedback instead of assumptions. Aligning with Andriy
+          on the API and safety early prevented rework later. I also learned
+          that collapsing the onboarding from many steps to a single
+          sequence improved clarity. The main takeaway for me is that a
+          small set of clear decisions, shared with the backend owner and
+          tested with real users, beats a long feature list that never
+          ships.
         </p>
       </section>
 
       <section class="content-section fade-in">
         <h2>Next Steps</h2>
         <p>
-          I want to refine the meet flow and onboarding from beta data and explore campus-specific features or a broader study. No fixed roadmap yet; the capstone gave me a working beta and a direction. [TODO: Justin reflection input]
+          [NEED INPUT: Do you want to mention specific next steps (e.g.
+          more beta rounds, App Store submission, or closing the project)?
+          Or keep this section general?]
         </p>
       </section>
 
       <section class="content-section fade-in">
         <h2>Conclusion</h2>
         <p>
-          The project changed how I approach building a product from scratch. [TODO: Justin reflection input]
+          Serene was a group capstone. I led product, design, and frontend.
+          Andriy led backend and systems. Together we shipped an iOS app
+          that keeps the digital part lightweight and pushes people toward
+          safe, in-person meets when there is intent on both sides. I
+          take away a clearer sense of how to run research into decisions,
+          build a frontend under constraints, and coordinate with a
+          backend owner so the integration stays predictable. The artifacts
+          we left are the log of that progression.
         </p>
       </section>
     </main>
