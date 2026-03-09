@@ -114,118 +114,100 @@
       <h1 class="page-title">Overall Capstone  Justin Liao</h1>
 
       <section class="content-section fade-in">
-        <h2>Starting Point</h2>
+        <h2>Introduction</h2>
         <p>
-          I came into the capstone wanting to own product direction and the
-          user-facing experience. Our team chose to build Serene, a dating
-          app for college students that pushes toward meeting in real life
-          instead of endless swiping. I took the lead on product, design,
-          and frontend. Andriy owned the backend and systems. From the start
-          we agreed on a tight scope: real profiles with Polaroids,
-          location-based discovery, and one IRL meet with safety guardrails.
-          That framing let me focus on the flow users would actually see and
-          touch.
+          For my capstone project, I worked on product direction, UI UX
+          design, and the iOS frontend for Serene. Serene is a dating app
+          for college students that tries to move dating from endless
+          swiping and messaging to meeting in real life through serendipity.
+        </p>
+        <p>
+          This project also pushed me into iOS development for the first
+          time. I worked with my co-founder, Andriy, who built the
+          backend. Building the app in parallel and keeping the frontend and
+          backend aligned made this feel closer to real software work than
+          most classes.
         </p>
       </section>
 
       <section class="content-section fade-in">
-        <h2>Turning Research into Decisions</h2>
+        <h2>Project Motivation and Technology Choices</h2>
         <p>
-          We ran stakeholder interviews and surveys and looked at apps like
-          Hinge and Coffee Meets Bagel. What stuck with me was how often
-          conversations faded and how much people overthought their
-          profiles. Apps were built for engagement, not for meeting in real
-          life. I used that to argue for Polaroid-first onboarding and meet
-          IRL as the north star. We positioned for college students 18 to 26
-          and bet on proximity-based discovery instead of copying swipe
-          mechanics. The research gave me a clear basis to cut scope and say
-          no to deeper in-app chat so we could ship one coherent story.
+          My starting belief was that most dating apps are built for
+          dopamine boosts. People swipe a lot, overthink profiles, and
+          chats lose momentum. Serene takes the opposite approach. We keep
+          the digital part lightweight, then push people toward safe,
+          meaningful in-person interaction when there is intent on both
+          sides.
+        </p>
+        <p>
+          For the frontend, I chose SwiftUI because it is the modern iOS
+          way to build interfaces and it helped me move fast once I
+          understood the patterns. I used Xcode as the main IDE and Apple
+          Maps with MapKit because the product depends on location-based
+          discovery. I designed the user flows in Figma first, then
+          translated them into SwiftUI screens with a minimal black and
+          white style so the product felt clear and not cluttered.
         </p>
       </section>
 
       <section class="content-section fade-in">
-        <h2>Building the Frontend Under Constraints</h2>
+        <h2>System Design and Development Process</h2>
         <p>
-          I led the Figma design and then the SwiftUI build and Apple Maps
-          integration. The main constraint was time: we had to ship an iOS
-          app that could talk to Andriy’s API and still feel focused. I
-          kept the flow in short steps so it never felt overwhelming and
-          gave clear rationale for location and notifications. Early
-          wireframes had too many steps. I collapsed them into a single
-          sequence: show once, then capture. In SwiftUI I structured
-          navigation and state around discovery, profile, and meet flow.
-          When the meet flow gained states like pending, confirmed, and
-          expired, I refactored so the frontend could stay in sync with the
-          backend without guesswork.
+          To make the work manageable, I broke the app into core flows and
+          built them one at a time. I started with the basic navigation and
+          page structure, then added the onboarding flow, and then the map-based
+          discovery flow. I also tried to keep UI components reusable so
+          the design stayed consistent across screens.
+        </p>
+        <p>
+          Because the backend was being built separately, I stayed focused
+          on making the frontend easy to connect later. I wrote clear
+          comments in important places, kept the data models simple, and
+          planned the API wiring so we could integrate without rewriting
+          large parts of the UI.
         </p>
       </section>
 
       <section class="content-section fade-in">
-        <h2>Collaboration and Coordination</h2>
+        <h2>Challenges and Collaboration</h2>
         <p>
-          Andriy and I coordinated weekly. We mapped the full user flow
-          early so design and backend could stay aligned. He used that flow
-          to define API endpoints and safety checks. I wired the app to his
-          backend near the end of the quarter. Aligning on request and
-          response shapes and on safety behavior up front meant we did not
-          have to rework the client when his API changed. I learned that
-          spending time on the handoff pays off. We did not merge frontend
-          and backend until we had a clear checklist, and that kept
-          integration predictable.
+          The hardest technical parts for me were MapKit, state management
+          in SwiftUI, and implementing the liquid glass style without
+          breaking readability. I was also new to Xcode, so the IDE and the
+          iOS project structure felt confusing at first. A lot of the early
+          time went into reading developer documentation, following
+          tutorials, and learning how SwiftUI wants state to flow through
+          views.
+        </p>
+        <p>
+          Collaboration was also a big part of the work. Since Andriy and I
+          worked on different parts of the system, we had a weekly sync call
+          to stay aligned. When we started connecting the frontend and
+          backend, we had additional calls to resolve bugs and adjust small
+          details like request formats and data fields. Getting those
+          handoffs right taught me how much communication matters when one
+          side depends on the other.
         </p>
       </section>
 
       <section class="content-section fade-in">
-        <h2>Testing and Iteration</h2>
+        <h2>Conclusion and Future Work</h2>
         <p>
-          We shipped to beta testers via TestFlight and ran through a
-          checklist for auth, discovery, match, meet, and safety. Testers
-          said the Polaroid and meet flow felt different from typical apps.
-          The confusion we heard was about when to enable location and what
-          nearby meant. We adjusted copy and one onboarding step in response.
-          I had to let go of how I thought the flow should be explained and
-          follow what actually confused people. We did not collect formal
-          metrics. The iteration was qualitative: we changed what testers
-          pointed at and documented why.
+          Overall, building the frontend for Serene helped me learn how to
+          take a product idea and turn it into a working iOS prototype. I
+          also learned how different iOS development feels compared to web
+          development, especially around state, navigation, and debugging
+          inside Xcode.
         </p>
-      </section>
-
-      <section class="content-section fade-in">
-        <h2>What I Learned</h2>
         <p>
-          Doing the full loop from research to scope to design to
-          implementation to integration to beta taught me to make decisions
-          under constraints. I learned to use research to justify cuts and to
-          iterate from feedback instead of assumptions. Aligning with Andriy
-          on the API and safety early prevented rework later. I also learned
-          that collapsing the onboarding from many steps to a single
-          sequence improved clarity. The main takeaway for me is that a
-          small set of clear decisions, shared with the backend owner and
-          tested with real users, beats a long feature list that never
-          ships.
-        </p>
-      </section>
-
-      <section class="content-section fade-in">
-        <h2>Next Steps</h2>
-        <p>
-          [NEED INPUT: Do you want to mention specific next steps (e.g.
-          more beta rounds, App Store submission, or closing the project)?
-          Or keep this section general?]
-        </p>
-      </section>
-
-      <section class="content-section fade-in">
-        <h2>Conclusion</h2>
-        <p>
-          Serene was a group capstone. I led product, design, and frontend.
-          Andriy led backend and systems. Together we shipped an iOS app
-          that keeps the digital part lightweight and pushes people toward
-          safe, in-person meets when there is intent on both sides. I
-          take away a clearer sense of how to run research into decisions,
-          build a frontend under constraints, and coordinate with a
-          backend owner so the integration stays predictable. The artifacts
-          we left are the log of that progression.
+          If we continue this project, the next work would focus on
+          polishing the onboarding clarity, tightening the frontend and
+          backend integration, and running small campus tests to see
+          whether students understand the main idea quickly. The most
+          important lesson for me is that design and engineering have to
+          stay connected, especially when the goal is to get people to meet
+          in real life instead of spending time inside the app.
         </p>
       </section>
     </main>
