@@ -7,8 +7,11 @@
     <!-- Anti-flash: apply saved theme before first paint -->
     <script>
       (function () {
-        var t = localStorage.getItem("serene-theme") ||
-          (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        var t =
+          localStorage.getItem("serene-theme") ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
         document.documentElement.setAttribute("data-theme", t);
       })();
     </script>
@@ -22,8 +25,16 @@
     <header class="site-header">
       <div class="header-inner">
         <a href="index.html" class="site-title">
-          <img class="site-logo logo-ver-light" src="assets/logo%20black.png" alt="Serene">
-          <img class="site-logo logo-ver-dark" src="assets/logo%20white.png" alt="Serene">
+          <img
+            class="site-logo logo-ver-light"
+            src="assets/logo%20black.png"
+            alt="Serene"
+          />
+          <img
+            class="site-logo logo-ver-dark"
+            src="assets/logo%20white.png"
+            alt="Serene"
+          />
           <span>Serene</span>
         </a>
 
@@ -51,19 +62,47 @@
             <ul class="nav-list" id="nav-list">
               <li><a href="index.html">Home</a></li>
               <li><a href="user.html">The User</a></li>
-              <li><a href="capstone-experience.html">Capstone Experience</a></li>
-              <li><a href="annotated-bibliography.html">Annotated Bibliography</a></li>
+              <li>
+                <a href="capstone-experience.html">Capstone Experience</a>
+              </li>
+              <li>
+                <a href="annotated-bibliography.html">Annotated Bibliography</a>
+              </li>
               <li><a href="overall-capstone.html">Overall Capstone</a></li>
             </ul>
           </nav>
 
           <!-- Theme toggle -->
           <button class="theme-toggle" aria-label="Switch to dark theme">
-            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+            <svg
+              class="icon-moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
             </svg>
-            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            <svg
+              class="icon-sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
             </svg>
           </button>
         </div>
@@ -72,55 +111,88 @@
 
     <!-- ========== Main Content ========== -->
     <main id="main" class="site-main">
-      <h1 class="page-title">Capstone Portfolio</h1>
-      <p class="page-intro">
-        Serene is a college-focused dating app built on the principle of realness
-        first &mdash; helping students make genuine connections through authentic
-        self-presentation.
+      <h1 class="page-title">Serene</h1>
+      <p class="page-intro">Meet your crush IRL.</p>
+      <p class="overview">
+        Most dating apps today feel like work. Serene takes the opposite
+        approach: we keep the digital part lightweight, then push people
+        toward safe, meaningful in-person interaction as soon as there is
+        intent on both sides. College students ages 18 to 26; real,
+        natural vibes; friends and mutuals. It’s not just another dating app,
+        it’s a cultural movement to bring back GenZ romance.
       </p>
 
-      <!-- Placeholder Hero Image -->
-      <div class="placeholder-image fade-in">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
-        </svg>
-        <span>Hero image placeholder</span>
-      </div>
+      <!-- IMAGE NEEDED: Final prototype screenshots montage. When provided, replace the placeholder div below with: <img src="assets/images/serene-fig-01-home-screens.png" alt="Serene prototype screenshots: home, onboarding, map, and match flow." loading="lazy"> -->
+      <figure class="artifact fade-in">
+        <div class="artifact-placeholder">[Placeholder: Final app screenshots montage]</div>
+        <figcaption>Figure 1. Serene prototype screenshots (home, onboarding, map, match flow).</figcaption>
+      </figure>
 
-      <!-- Quick Links -->
+      <section class="content-section fade-in">
+        <h2>Problem</h2>
+        <ul class="tight-bullets">
+          <li>Swiping rarely turns into real dates.</li>
+          <li>Profiles are too perfect, not real.</li>
+          <li>Chats lose momentum.</li>
+          <li>Apps optimize for engagement, not relationships.</li>
+        </ul>
+      </section>
+
+      <section class="content-section fade-in">
+        <h2>What Serene Does Differently</h2>
+        <ul class="tight-bullets">
+          <li>Polaroid-first real profiles (unfiltered, in-person capture).</li>
+          <li>Location-based discovery so you see who’s nearby.</li>
+          <li>Friends &amp; mutuals so matches feel grounded.</li>
+          <li>Meet IRL as the goal, not endless messaging.</li>
+        </ul>
+      </section>
+
+      <section class="content-section fade-in">
+        <h2>How It Works (High Level)</h2>
+        <ol class="numbered-flow">
+          <li>Take your first Polaroid. Real, unfiltered, just you.</li>
+          <li>Set preferences and availability.</li>
+          <li>Share your location. Never miss your potential date.</li>
+          <li>Discover profiles; matches stay lightweight.</li>
+          <li>Get notified when a match is nearby.</li>
+          <li>Decide whether to meet.</li>
+        </ol>
+      </section>
+
+      <section class="content-section fade-in">
+        <h2>Team</h2>
+        <div class="team-cards">
+          <div class="snapshot-card">
+            <h3>Justin Liao</h3>
+            <p>Product, Design, Frontend (Figma, SwiftUI, Apple Maps)</p>
+          </div>
+          <div class="snapshot-card">
+            <h3>Andriy Demyanyuk</h3>
+            <p>Backend (Python/Flask, Supabase/Postgres, proximity engine, safety verification)</p>
+          </div>
+        </div>
+      </section>
+
       <section class="content-section fade-in">
         <h2>Quick Links</h2>
         <div class="quick-links">
           <a href="user.html" class="quick-link">
             <span>The User</span>
-            <svg class="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
           </a>
           <a href="capstone-experience.html" class="quick-link">
             <span>Capstone Experience</span>
-            <svg class="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
           </a>
           <a href="annotated-bibliography.html" class="quick-link">
             <span>Annotated Bibliography</span>
-            <svg class="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
           </a>
           <a href="overall-capstone.html" class="quick-link">
             <span>Overall Capstone</span>
-            <svg class="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
           </a>
-        </div>
-      </section>
-
-      <!-- Project Snapshot (optional placeholder) -->
-      <section class="content-section fade-in">
-        <h2>Project Snapshot</h2>
-        <div class="snapshot-card">
-          <h3>Overview</h3>
-          <p>
-            Serene addresses the exhaustion and inauthenticity that plague most
-            dating apps by anchoring the onboarding experience in a real-photo
-            selfie capture &mdash; reducing fake accounts and making every match
-            feel more trustworthy.
-          </p>
         </div>
       </section>
     </main>

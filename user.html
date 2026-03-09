@@ -7,8 +7,11 @@
     <!-- Anti-flash: apply saved theme before first paint -->
     <script>
       (function () {
-        var t = localStorage.getItem("serene-theme") ||
-          (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        var t =
+          localStorage.getItem("serene-theme") ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
         document.documentElement.setAttribute("data-theme", t);
       })();
     </script>
@@ -21,15 +24,34 @@
     <header class="site-header">
       <div class="header-inner">
         <a href="index.html" class="site-title">
-          <img class="site-logo logo-ver-light" src="assets/logo%20black.png" alt="Serene">
-          <img class="site-logo logo-ver-dark" src="assets/logo%20white.png" alt="Serene">
+          <img
+            class="site-logo logo-ver-light"
+            src="assets/logo%20black.png"
+            alt="Serene"
+          />
+          <img
+            class="site-logo logo-ver-dark"
+            src="assets/logo%20white.png"
+            alt="Serene"
+          />
           <span>Serene</span>
         </a>
 
         <div class="header-controls">
           <nav class="site-nav" aria-label="Main navigation">
-            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle menu">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <button
+              class="nav-toggle"
+              aria-expanded="false"
+              aria-controls="nav-list"
+              aria-label="Toggle menu"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              >
                 <line x1="3" y1="6" x2="21" y2="6" />
                 <line x1="3" y1="12" x2="21" y2="12" />
                 <line x1="3" y1="18" x2="21" y2="18" />
@@ -39,15 +61,47 @@
             <ul class="nav-list" id="nav-list">
               <li><a href="index.html">Home</a></li>
               <li><a href="user.html">The User</a></li>
-              <li><a href="capstone-experience.html">Capstone Experience</a></li>
-              <li><a href="annotated-bibliography.html">Annotated Bibliography</a></li>
+              <li>
+                <a href="capstone-experience.html">Capstone Experience</a>
+              </li>
+              <li>
+                <a href="annotated-bibliography.html">Annotated Bibliography</a>
+              </li>
               <li><a href="overall-capstone.html">Overall Capstone</a></li>
             </ul>
           </nav>
 
           <button class="theme-toggle" aria-label="Switch to dark theme">
-            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg
+              class="icon-moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+            </svg>
+            <svg
+              class="icon-sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
           </button>
         </div>
       </div>
@@ -56,41 +110,73 @@
     <!-- ========== Main Content ========== -->
     <main id="main" class="site-main">
       <h1 class="page-title">The User</h1>
-      <p class="page-intro">
-        College students who want real connections &mdash; not the exhausting
-        performance of a perfectly curated profile.
-      </p>
-
-      <!-- Placeholder Image -->
-      <div class="placeholder-image fade-in">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        <span>User persona image placeholder</span>
-      </div>
 
       <section class="content-section fade-in">
-        <h2>User Profile</h2>
+        <h2>Who You Are</h2>
         <p>
-          Primary user: undergraduate college students, ages 18&ndash;24, who
-          are open to romantic connections and want an app experience that feels
-          lightweight, honest, and safe.
+          College students ages 18 to 26. Students who don’t already have
+          social circles that make IRL dating easy. People who care about
+          real, natural vibes. You want to meet someone in real life, not
+          just collect matches. Serene is for you.
         </p>
       </section>
 
       <section class="content-section fade-in">
-        <h2>Needs &amp; Goals</h2>
+        <h2>What You Get From Serene</h2>
+        <ul class="tight-bullets">
+          <li>Less profile pressure: no resume-style bios or endless photo curation.</li>
+          <li>More authentic discovery: Polaroid-first profiles and location-based “who’s nearby.”</li>
+          <li>Faster path to IRL meetups; chats don’t lose momentum.</li>
+          <li>Safer structure: time-bounded windows and check-in options.</li>
+          <li>Real connections, not engagement metrics. A story you feel proud of.</li>
+        </ul>
+      </section>
+
+      <!-- IMAGE NEEDED: Onboarding Polaroid capture screen. Replace placeholder div with: <img src="assets/images/serene-fig-02-onboarding-polaroid.png" alt="Serene onboarding screen prompting the user to take their first Polaroid photo." loading="lazy"> -->
+      <figure class="artifact fade-in">
+        <div class="artifact-placeholder">[Placeholder: Onboarding Polaroid capture screen]</div>
+        <figcaption>Figure 1. Polaroid-first onboarding to keep profiles real.</figcaption>
+      </figure>
+
+      <section class="content-section fade-in">
+        <h2>How Serene Works (Your Experience)</h2>
         <p>
-          Users need confidence that who they match with is who they say they
-          are. They want low-friction onboarding, no resume-style profiles, and
-          conversations that can realistically lead to meeting in real life.
+          Take your first Polaroid. Real, unfiltered, just you. Set
+          preferences and availability. Share your location. Never miss your
+          potential date. You discover profiles; the digital part stays
+          lightweight until there is intent on both sides. Serene then pushes
+          you toward safe, meaningful in-person interaction. When you and a
+          match decide to meet, you confirm a meetup and use safety options
+          during the meeting window.
+        </p>
+      </section>
+
+      <!-- IMAGE NEEDED: Meet flow diagram (notification → accept → map → check-in). Replace placeholder div with: <img src="assets/images/serene-fig-03-meet-flow.png" alt="Diagram of the Serene meet flow: notification, accept, map guidance, and check-in." loading="lazy"> -->
+      <figure class="artifact fade-in">
+        <div class="artifact-placeholder">[Placeholder: Meet flow diagram]</div>
+        <figcaption>Figure 2. Meet flow from nearby notification to confirmation.</figcaption>
+      </figure>
+
+      <section class="content-section fade-in">
+        <h2>Why This Feels Different</h2>
+        <p>
+          The Art of Serendipity. Relationships are natural, not intentional.
+          Imagine meeting your future partner at the supermarket, park, or
+          school library. You see friends and mutuals in the mix so matches
+          feel grounded. The Polaroid capture signals that everyone is
+          showing up as themselves. It’s not just another dating app, it’s a
+          cultural movement to bring back GenZ romance.
         </p>
       </section>
 
       <section class="content-section fade-in">
-        <h2>Design Implications</h2>
+        <h2>Safety and Trust</h2>
         <p>
-          The onboarding flow must surface authenticity immediately. A guided
-          selfie capture replaces the typical photo upload, setting a tone of
-          realness from the very first interaction.
+          Real photo capture reduces fake or heavily edited profiles. A
+          time-bounded meeting window and QR check-in give both sides a clear
+          frame for the meetup. You can optionally share location with trusted
+          contacts. Serene keeps safety factual and avoids over-claiming; the
+          goal is structure that supports real-world meetings.
         </p>
       </section>
     </main>

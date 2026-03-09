@@ -7,8 +7,11 @@
     <!-- Anti-flash: apply saved theme before first paint -->
     <script>
       (function () {
-        var t = localStorage.getItem("serene-theme") ||
-          (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        var t =
+          localStorage.getItem("serene-theme") ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
         document.documentElement.setAttribute("data-theme", t);
       })();
     </script>
@@ -21,15 +24,34 @@
     <header class="site-header">
       <div class="header-inner">
         <a href="index.html" class="site-title">
-          <img class="site-logo logo-ver-light" src="assets/logo%20black.png" alt="Serene">
-          <img class="site-logo logo-ver-dark" src="assets/logo%20white.png" alt="Serene">
+          <img
+            class="site-logo logo-ver-light"
+            src="assets/logo%20black.png"
+            alt="Serene"
+          />
+          <img
+            class="site-logo logo-ver-dark"
+            src="assets/logo%20white.png"
+            alt="Serene"
+          />
           <span>Serene</span>
         </a>
 
         <div class="header-controls">
           <nav class="site-nav" aria-label="Main navigation">
-            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle menu">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <button
+              class="nav-toggle"
+              aria-expanded="false"
+              aria-controls="nav-list"
+              aria-label="Toggle menu"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              >
                 <line x1="3" y1="6" x2="21" y2="6" />
                 <line x1="3" y1="12" x2="21" y2="12" />
                 <line x1="3" y1="18" x2="21" y2="18" />
@@ -39,15 +61,47 @@
             <ul class="nav-list" id="nav-list">
               <li><a href="index.html">Home</a></li>
               <li><a href="user.html">The User</a></li>
-              <li><a href="capstone-experience.html">Capstone Experience</a></li>
-              <li><a href="annotated-bibliography.html">Annotated Bibliography</a></li>
+              <li>
+                <a href="capstone-experience.html">Capstone Experience</a>
+              </li>
+              <li>
+                <a href="annotated-bibliography.html">Annotated Bibliography</a>
+              </li>
               <li><a href="overall-capstone.html">Overall Capstone</a></li>
             </ul>
           </nav>
 
           <button class="theme-toggle" aria-label="Switch to dark theme">
-            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg
+              class="icon-moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+            </svg>
+            <svg
+              class="icon-sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
           </button>
         </div>
       </div>
@@ -57,40 +111,127 @@
     <main id="main" class="site-main">
       <h1 class="page-title">Overall Capstone</h1>
       <p class="page-intro">
-        A high-level synthesis of the Serene project &mdash; what was built,
-        what was learned, and where it could go next.
+        Building Serene as a two-person capstone gave us end-to-end ownership
+        from research through design, implementation, integration, and beta.
+        This page organizes our reflections by role: frontend and product
+        (Justin) and backend and systems (Andriy), then closes with a shared
+        conclusion.
       </p>
 
-      <!-- Placeholder Image -->
-      <div class="placeholder-image fade-in">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <span>Project summary image placeholder</span>
-      </div>
-
       <section class="content-section fade-in">
-        <h2>Summary</h2>
+        <h2>Justin Liao — Frontend and Product</h2>
+
+        <h3>Starting Point</h3>
         <p>
-          Serene is a college-focused dating app that replaces the typical
-          photo-upload flow with a guided selfie capture during onboarding,
-          making authenticity the foundation of every match.
+          Most dating apps today feel like work. I came into the capstone
+          with experience in design and some exposure to Swift; Serene
+          pushed me to own the full frontend and product narrative. My
+          starting point was the problem space: college dating that rarely
+          led to real meetups. [TODO: Replace with Justin reflection details]
+        </p>
+
+        <h3>Turning Research into Decisions</h3>
+        <p>
+          Research and competitive analysis drove the decision to bet on
+          Polaroid-first profiles and location-based discovery. I turned
+          survey and interview insights into concrete product and design
+          choices that we locked into the MVP scope. [TODO: Replace with Justin reflection details]
+        </p>
+
+        <h3>Building Under Constraints</h3>
+        <p>
+          Time and team size meant we had to cut scope and prioritize. I
+          focused on onboarding, discovery, and the meet flow in Figma and
+          SwiftUI, and made tradeoffs when features threatened the ship
+          date. [TODO: Replace with Justin reflection details]
+        </p>
+
+        <h3>Collaboration and Coordination</h3>
+        <p>
+          Andriy and I coordinated weekly and aligned on API contracts and
+          safety behavior early. I learned how much clear handoffs and
+          shared language mattered when integrating the iOS app with the
+          backend near the end of the quarter. [TODO: Replace with Justin reflection details]
+        </p>
+
+        <h3>Quality, Testing, and Iteration</h3>
+        <p>
+          We used TestFlight for beta and iterated on copy and one onboarding
+          step based on feedback. I learned to treat beta as a source of
+          concrete changes rather than just validation. [TODO: Replace with Justin reflection details]
+        </p>
+
+        <h3>What I Learned</h3>
+        <p>
+          The biggest takeaway was doing the full loop from research to
+          shipped beta: making decisions under constraints and iterating
+          from feedback. Frontend–backend alignment and clear safety rules
+          made the “meet IRL” promise real. [TODO: Replace with Justin reflection details]
+        </p>
+
+        <h3>Next Steps</h3>
+        <p>
+          I want to refine the meet flow and onboarding based on beta data,
+          and explore campus-specific features or a broader study. I do not
+          have a fixed roadmap; the capstone gave me a working beta and a
+          direction to build on. [TODO: Replace with Justin reflection details]
         </p>
       </section>
 
       <section class="content-section fade-in">
-        <h2>Key Takeaways</h2>
+        <h2>Andriy Demyanyuk — Backend and Systems</h2>
+
+        <h3>Starting Point</h3>
         <p>
-          The most significant insight: users respond positively to products
-          that reduce pressure rather than add it. Simplicity and trust are not
-          trade-offs &mdash; they reinforce each other.
+          Placeholder for Andriy’s starting point: skills, context, and why
+          he took on backend and systems for Serene. [TODO: Waiting for Andriy’s reflection input]
+        </p>
+
+        <h3>Turning Research into Decisions</h3>
+        <p>
+          Placeholder for how Andriy used research or product inputs to
+          shape API design, data model, or safety behavior. [TODO: Waiting for Andriy’s reflection input]
+        </p>
+
+        <h3>Building Under Constraints</h3>
+        <p>
+          Placeholder for constraints Andriy faced (time, scope, tech
+          choices) and how he prioritized. [TODO: Waiting for Andriy’s reflection input]
+        </p>
+
+        <h3>Collaboration and Coordination</h3>
+        <p>
+          Placeholder for how Andriy coordinated with Justin and kept API
+          and safety rules aligned. [TODO: Waiting for Andriy’s reflection input]
+        </p>
+
+        <h3>Quality, Testing, and Iteration</h3>
+        <p>
+          Placeholder for testing, integration, and iteration on the
+          backend side. [TODO: Waiting for Andriy’s reflection input]
+        </p>
+
+        <h3>What I Learned</h3>
+        <p>
+          Placeholder for Andriy’s main takeaways from the capstone
+          experience. [TODO: Waiting for Andriy’s reflection input]
+        </p>
+
+        <h3>Next Steps</h3>
+        <p>
+          Placeholder for Andriy’s next steps or where he wants to take
+          the work next. [TODO: Waiting for Andriy’s reflection input]
         </p>
       </section>
 
       <section class="content-section fade-in">
-        <h2>Next Steps</h2>
+        <h2>Conclusion</h2>
         <p>
-          Future directions include expanding the matching algorithm,
-          integrating campus-specific features, and conducting a broader
-          usability study with a more diverse student population.
+          The project changed how we approach building a product from
+          scratch: research and scope first, then clear roles and
+          integration points. We want to take the beta further with more
+          users and iteration on safety and the meet flow. Meet your crush
+          IRL—that promise stays at the center.
         </p>
       </section>
     </main>

@@ -7,8 +7,11 @@
     <!-- Anti-flash: apply saved theme before first paint -->
     <script>
       (function () {
-        var t = localStorage.getItem("serene-theme") ||
-          (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        var t =
+          localStorage.getItem("serene-theme") ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
         document.documentElement.setAttribute("data-theme", t);
       })();
     </script>
@@ -21,15 +24,34 @@
     <header class="site-header">
       <div class="header-inner">
         <a href="index.html" class="site-title">
-          <img class="site-logo logo-ver-light" src="assets/logo%20black.png" alt="Serene">
-          <img class="site-logo logo-ver-dark" src="assets/logo%20white.png" alt="Serene">
+          <img
+            class="site-logo logo-ver-light"
+            src="assets/logo%20black.png"
+            alt="Serene"
+          />
+          <img
+            class="site-logo logo-ver-dark"
+            src="assets/logo%20white.png"
+            alt="Serene"
+          />
           <span>Serene</span>
         </a>
 
         <div class="header-controls">
           <nav class="site-nav" aria-label="Main navigation">
-            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle menu">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <button
+              class="nav-toggle"
+              aria-expanded="false"
+              aria-controls="nav-list"
+              aria-label="Toggle menu"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              >
                 <line x1="3" y1="6" x2="21" y2="6" />
                 <line x1="3" y1="12" x2="21" y2="12" />
                 <line x1="3" y1="18" x2="21" y2="18" />
@@ -39,15 +61,47 @@
             <ul class="nav-list" id="nav-list">
               <li><a href="index.html">Home</a></li>
               <li><a href="user.html">The User</a></li>
-              <li><a href="capstone-experience.html">Capstone Experience</a></li>
-              <li><a href="annotated-bibliography.html">Annotated Bibliography</a></li>
+              <li>
+                <a href="capstone-experience.html">Capstone Experience</a>
+              </li>
+              <li>
+                <a href="annotated-bibliography.html">Annotated Bibliography</a>
+              </li>
               <li><a href="overall-capstone.html">Overall Capstone</a></li>
             </ul>
           </nav>
 
           <button class="theme-toggle" aria-label="Switch to dark theme">
-            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg
+              class="icon-moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+            </svg>
+            <svg
+              class="icon-sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
           </button>
         </div>
       </div>
@@ -57,43 +111,258 @@
     <main id="main" class="site-main">
       <h1 class="page-title">Capstone Experience</h1>
       <p class="page-intro">
-        From identifying the problem to delivering a functional prototype &mdash;
-        a reflection on the process, pivots, and decisions that shaped Serene.
+        Most dating apps today feel like work. We built Serene to take the
+        opposite approach. This page shows how it evolved from research
+        through MVP scope, design, implementation, integration, and
+        TestFlight beta. I (Justin) handled product, design, and frontend;
+        Andriy handled backend. We coordinated weekly and integrated the iOS
+        app with the API near the end of the quarter.
       </p>
 
-      <!-- Placeholder Image -->
-      <div class="placeholder-image fade-in">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        <span>Journey timeline image placeholder</span>
-      </div>
-
       <section class="content-section fade-in">
-        <h2>Process</h2>
+        <h2>Research and Stakeholder Insights</h2>
         <p>
-          The project followed a human-centered design process: competitive
-          analysis, user research, low-fidelity wireframes, iterative
-          prototyping, and usability testing across multiple rounds.
+          We started with surveys and interviews. Swiping rarely turns into
+          real dates; profiles are too perfect, not real; chats lose momentum.
+          The insights drove our positioning: authenticity, IRL meetups, and
+          college students ages 18 to 26.
+        </p>
+
+        <!-- IMAGE NEEDED: Survey/interview summary. Replace placeholder with <img src="assets/images/serene-fig-a1-research-summary.png" alt="..." loading="lazy"> -->
+        <figure class="artifact">
+          <div class="artifact-placeholder">[Placeholder: Survey/interview summary]</div>
+          <figcaption>Figure A1. Survey and interview summary on college dating behavior and trust.</figcaption>
+        </figure>
+        <p class="artifact-annotation">
+          The summary surfaced fatigue with curated profiles and endless chat.
+          We used it to lock in Polaroid-first onboarding and “meet IRL” as the
+          north star. Later design and scope decisions referred back to these
+          themes.
+        </p>
+
+        <!-- IMAGE NEEDED: Competitive analysis table. Replace placeholder with <img src="assets/images/serene-fig-a2-competitive-analysis.png" alt="..." loading="lazy"> -->
+        <figure class="artifact">
+          <div class="artifact-placeholder">[Placeholder: Competitive analysis table]</div>
+          <figcaption>Figure A2. Competitive analysis of dating apps and Serene’s positioning.</figcaption>
+        </figure>
+        <p class="artifact-annotation">
+          The table compared incumbents on authenticity, location, and
+          college focus. It justified our bet on real photos and
+          proximity-based discovery instead of duplicating swipe mechanics.
         </p>
       </section>
 
       <section class="content-section fade-in">
-        <h2>Challenges</h2>
+        <h2>MVP Scope and Product Decisions</h2>
         <p>
-          Balancing simplicity with enough structure to convey trust was the
-          central design tension. Reducing onboarding friction without
-          sacrificing the authenticity requirement required several rethinks of
-          the Polaroid-capture flow.
+          We defined MVP requirements and a user flow map so design and
+          backend stayed aligned. Scope stayed tight: profile (Polaroid +
+          basics), discovery, lightweight match, and a clear path to one
+          IRL meet with safety guardrails.
+        </p>
+
+        <!-- IMAGE NEEDED: MVP requirements snapshot. Replace placeholder with <img src="assets/images/serene-fig-b1-mvp-requirements.png" alt="..." loading="lazy"> -->
+        <figure class="artifact">
+          <div class="artifact-placeholder">[Placeholder: MVP requirements snapshot]</div>
+          <figcaption>Figure B1. MVP requirements for discovery, matching, Polaroid onboarding, and safety.</figcaption>
+        </figure>
+        <p class="artifact-annotation">
+          The requirements doc became the single source of truth for what we
+          would ship in the capstone window. We cut “nice-to-haves” like
+          in-app chat depth and kept the 30-minute meeting window and QR
+          check-in from the start.
+        </p>
+
+        <!-- IMAGE NEEDED: User flow map. Replace placeholder with <img src="assets/images/serene-fig-b2-user-flow-map.png" alt="..." loading="lazy"> -->
+        <figure class="artifact">
+          <div class="artifact-placeholder">[Placeholder: User flow map]</div>
+          <figcaption>Figure B2. User flow from sign-up through first IRL meet.</figcaption>
+        </figure>
+        <p class="artifact-annotation">
+          The flow made location and notification permissions explicit so we
+          could design and implement them consistently. Andriy used it to
+          align API endpoints and safety checks with each step.
         </p>
       </section>
 
       <section class="content-section fade-in">
-        <h2>Milestones</h2>
+        <h2>UI/UX Design in Figma (Justin)</h2>
         <p>
-          Key milestones included finalizing the user persona, completing the
-          first interactive prototype, and conducting usability sessions that
-          validated the core selfie-onboarding concept.
+          I designed the app in Figma from wireframes to higher-fidelity
+          screens. The main tension was onboarding: we needed Polaroid and
+          permissions without feeling heavy. Several iterations simplified the
+          trust flow.
+        </p>
+
+        <!-- IMAGE NEEDED: Early wireframes vs refined screens. Replace placeholder with <img src="assets/images/serene-fig-c1-wireframes-vs-final.png" alt="..." loading="lazy"> -->
+        <figure class="artifact">
+          <div class="artifact-placeholder">[Placeholder: Early wireframes vs refined screens]</div>
+          <figcaption>Figure C1. Early wireframes compared to refined final screens.</figcaption>
+        </figure>
+        <p class="artifact-annotation">
+          Early wireframes had too many steps; the refined version collapsed
+          explanation and capture into a single, clear sequence. The
+          comparison documents the pivot from “explain everything” to “show
+          once, then capture.”
+        </p>
+
+        <!-- IMAGE NEEDED: Onboarding trust flow (location/notifications + Polaroids). Replace placeholder with <img src="assets/images/serene-fig-c2-onboarding-trust-flow.png" alt="..." loading="lazy"> -->
+        <figure class="artifact">
+          <div class="artifact-placeholder">[Placeholder: Onboarding trust flow (location/notifications + Polaroids)]</div>
+          <figcaption>Figure C2. Onboarding trust flow: location/notifications and Polaroid capture.</figcaption>
+        </figure>
+        <p class="artifact-annotation">
+          This flow tied permission requests to clear rationale (e.g., “see
+          who’s nearby”) and placed the Polaroid step after basics so users
+          understood why a real photo mattered. We kept it in the SwiftUI
+          build with minimal change.
         </p>
       </section>
+
+      <section class="content-section fade-in">
+        <h2>iOS Frontend Implementation (SwiftUI) (Justin)</h2>
+        <p>
+          I implemented the iOS app in SwiftUI and wired it to the backend
+          API. I structured navigation and state around discovery, profile,
+          and meet flow. Apple Maps integration handled “nearby” and map
+          guidance for meetups.
+        </p>
+
+        <!-- IMAGE NEEDED: SwiftUI navigation/state architecture diagram or code screenshot. Replace placeholder with <img src="assets/images/serene-fig-d1-swiftui-architecture.png" alt="..." loading="lazy"> -->
+        <figure class="artifact">
+          <div class="artifact-placeholder">[Placeholder: SwiftUI navigation/state architecture diagram or code screenshot]</div>
+          <figcaption>Figure D1. SwiftUI navigation and state architecture, or code screenshot showing view structure.</figcaption>
+        </figure>
+        <p class="artifact-annotation">
+          A clear separation between discovery, profile, and meet views made
+          it easier to plug in API calls and location updates. We refactored
+          once mid-quarter when the meet flow gained additional states (e.g.,
+          pending, confirmed, expired).
+        </p>
+
+        <!-- IMAGE NEEDED: Apple Maps integration screen. Replace placeholder with <img src="assets/images/serene-fig-d2-apple-maps-screen.png" alt="..." loading="lazy"> -->
+        <figure class="artifact">
+          <div class="artifact-placeholder">[Placeholder: Apple Maps integration screen]</div>
+          <figcaption>Figure D2. Apple Maps integration for discovery and meet guidance.</figcaption>
+        </figure>
+        <p class="artifact-annotation">
+          Maps showed nearby users (within backend-defined radius) and
+          supported the “meet IRL” step with directions. We had to balance
+          privacy (no persistent precise location) with enough detail for
+          “who’s around” and meet confirmation.
+        </p>
+      </section>
+
+      <section class="content-section fade-in">
+        <h2>Backend Architecture and Data (Flask + Supabase) (Andriy)</h2>
+        <p>
+          Andriy built the REST API in Python/Flask and used Supabase/Postgres
+          for persistence. The architecture supported auth, profiles, matches,
+          and meeting/safety data. We aligned on request/response shapes early
+          so the iOS client could integrate without guesswork.
+        </p>
+
+        <!-- IMAGE NEEDED: API architecture diagram. Replace placeholder with <img src="assets/images/serene-fig-e1-backend-architecture.png" alt="..." loading="lazy"> -->
+        <figure class="artifact">
+          <div class="artifact-placeholder">[Placeholder: API architecture diagram]</div>
+          <figcaption>Figure E1. Backend API architecture (Flask, Supabase, client).</figcaption>
+        </figure>
+        <p class="artifact-annotation">
+          The diagram clarified which endpoints handled discovery, matching,
+          and meet lifecycle. We added a small set of safety-related endpoints
+          after locking the core flows, and we updated the diagram to
+          reflect that.
+        </p>
+
+        <!-- IMAGE NEEDED: Database schema/UML. Replace placeholder with <img src="assets/images/serene-fig-e2-database-schema.png" alt="..." loading="lazy"> -->
+        <figure class="artifact">
+          <div class="artifact-placeholder">[Placeholder: Database schema/UML]</div>
+          <figcaption>Figure E2. Database schema for users, profiles, matches, and meeting/safety.</figcaption>
+        </figure>
+        <p class="artifact-annotation">
+          The schema made match and meeting state explicit (e.g., time
+          window, check-in status). That supported both the proximity engine
+          and the safety flow without ad-hoc fields. We kept migrations
+          minimal during the quarter.
+        </p>
+      </section>
+
+      <section class="content-section fade-in">
+        <h2>Matchmaking, Proximity Engine, and Safety (Backend + Product)</h2>
+        <p>
+          The proximity engine used Haversine distance to surface “who’s
+          nearby”; product and backend agreed on radius and refresh behavior.
+          Safety relied on a 30-minute meeting window, QR check-in, and
+          expiration so both sides had a clear, bounded frame.
+        </p>
+
+        <!-- IMAGE NEEDED: Proximity engine diagram/pseudocode. Replace placeholder with <img src="assets/images/serene-fig-f1-proximity-engine.png" alt="..." loading="lazy"> -->
+        <figure class="artifact">
+          <div class="artifact-placeholder">[Placeholder: Proximity engine diagram/pseudocode]</div>
+          <figcaption>Figure F1. Proximity engine (Haversine): diagram or pseudocode for location-based discovery.</figcaption>
+        </figure>
+        <p class="artifact-annotation">
+          Haversine gave us “good enough” distance for campus-scale discovery
+          without heavy GIS. We tuned the radius and how often the client
+          refreshed so the list felt live but not noisy. The diagram stayed as
+          the reference for any future tweaks.
+        </p>
+
+        <!-- IMAGE NEEDED: Safety flow diagram (30-min window + QR check-in + expiration). Replace placeholder with <img src="assets/images/serene-fig-f2-safety-flow.png" alt="..." loading="lazy"> -->
+        <figure class="artifact">
+          <div class="artifact-placeholder">[Placeholder: Safety flow diagram (30-min window + QR check-in + expiration)]</div>
+          <figcaption>Figure F2. Safety flow: 30-minute window, QR check-in, and expiration.</figcaption>
+        </figure>
+        <p class="artifact-annotation">
+          The flow made the meeting window and check-in mandatory in the
+          product logic so both parties had to opt in. Expiration prevented
+          stale “pending” states. We kept the description factual and
+          avoided over-claiming what the app could guarantee.
+        </p>
+      </section>
+
+      <section class="content-section fade-in">
+        <h2>Integration, TestFlight, and Beta Testing</h2>
+        <p>
+          We integrated the iOS app with the Flask API, ran through a short
+          checklist (auth, discovery, match, meet, safety), and shipped to
+          TestFlight for beta testers. Feedback drove small copy and flow
+          tweaks before we closed the capstone.
+        </p>
+
+        <!-- IMAGE NEEDED: Integration checklist or TestFlight submission screenshot. Replace placeholder with <img src="assets/images/serene-fig-g1-integration-testflight.png" alt="..." loading="lazy"> -->
+        <figure class="artifact">
+          <div class="artifact-placeholder">[Placeholder: Integration checklist or TestFlight submission screenshot]</div>
+          <figcaption>Figure G1. Integration checklist and TestFlight submission.</figcaption>
+        </figure>
+        <p class="artifact-annotation">
+          The checklist ensured we didn’t ship with broken auth or missing
+          error handling on key screens. TestFlight gave us a repeatable path
+          to get builds to testers without App Store review during
+          development.
+        </p>
+
+        <!-- IMAGE NEEDED: Beta feedback summary + iteration notes. Replace placeholder with <img src="assets/images/serene-fig-g2-beta-feedback.png" alt="..." loading="lazy"> -->
+        <figure class="artifact">
+          <div class="artifact-placeholder">[Placeholder: Beta feedback summary + iteration notes]</div>
+          <figcaption>Figure G2. Beta feedback summary and iteration notes.</figcaption>
+        </figure>
+        <p class="artifact-annotation">
+          Testers confirmed that Polaroid and the meet flow felt different
+          from typical apps; confusion centered on when to enable location and
+          what “nearby” meant. We adjusted copy and one onboarding step in
+          response. The notes document what we changed and why.
+        </p>
+      </section>
+
+      <p class="content-section what-i-learned">
+        What I learned: applied learning came from doing the full loop—research
+        to scope to design to implementation to integration and beta. The
+        biggest growth was in making decisions under constraints (time, scope,
+        two people) and iterating based on feedback instead of assumptions.
+        Aligning with Andriy on API and safety early prevented rework later;
+        these artifacts are the evidence of that progression.
+      </p>
     </main>
 
     <!-- ========== Footer ========== -->

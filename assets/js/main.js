@@ -64,7 +64,7 @@
     if (themeToggle) {
       themeToggle.setAttribute(
         "aria-label",
-        theme === "dark" ? "Switch to light theme" : "Switch to dark theme"
+        theme === "dark" ? "Switch to light theme" : "Switch to dark theme",
       );
     }
   }
@@ -102,7 +102,7 @@
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
 
     fadeEls.forEach(function (el) {
