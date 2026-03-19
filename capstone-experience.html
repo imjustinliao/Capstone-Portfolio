@@ -110,237 +110,585 @@
 
     <!-- ========== Main Content ========== -->
     <main id="main" class="site-main">
-      <h1 class="page-title">Capstone Experience</h1>
-      <p class="page-intro">
-        Most dating apps today feel like work. We built Serene to take the
-        opposite approach. This page is the capstone log: research, MVP
-        scope, design, implementation, integration, and TestFlight beta.
-        Justin led product, design, and frontend. Andriy led backend and systems. We
-        coordinated weekly and connected the frontend and backend together
-        near the end of the quarter.
+      <h1 class="page-title fade-in">Capstone Experience</h1>
+      <p class="page-intro fade-in">
+        This page documents how the Serene capstone project developed over
+        the quarter. It walks through research, product planning, UI work in
+        Figma, the iOS frontend in SwiftUI, the backend with Flask and
+        Supabase, and how we planned integration between the two sides.
+        Justin led product direction, UI/UX, and frontend. Andriy led backend
+        and systems. We met weekly and started connecting the frontend to the
+        backend near the end of the quarter.
+      </p>
+      <div class="demo-embed fade-in" role="region" aria-label="Serene demo video">
+        <iframe
+          src="https://www.youtube.com/embed/u6hU4qahp8Q"
+          title="Serene app demo (YouTube Short)"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+      <p class="demo-embed-fallback fade-in">
+        <a
+          href="https://youtube.com/shorts/u6hU4qahp8Q?si=tvT63XYnQO21481i"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Open demo on YouTube</a>
+        if the player does not load.
       </p>
 
       <section class="content-section fade-in">
-        <h2>Current Progress</h2>
-        <p><strong>Completed</strong></p>
+        <h2>Teamwork Dynamic</h2>
+        <p>
+          This project was built as a group capstone, so the process depended
+          on regular communication and coordination between product, frontend,
+          and backend work. Some parts were developed together, while others
+          were built separately and brought together later.
+        </p>
         <ul class="tight-bullets">
-          <li>Built a website for waitlist signups and promoted it to friends</li>
-          <li>Project specification and market research</li>
-          <li>UI UX design in Figma</li>
+          <li>Started with research and product vision together</li>
+          <li>Designed UI and user flows</li>
+          <li>Built frontend and backend separately</li>
+          <li>Connected the frontend and backend together</li>
+          <li>Prototype testing</li>
         </ul>
-        <p><strong>In Progress</strong></p>
-        <ul class="tight-bullets">
-          <li>Frontend development in SwiftUI</li>
-          <li>Backend development in Python Flask and Supabase</li>
-          <li>Frontend and backend integration</li>
-          <li>Preparing for TestFlight beta setup</li>
-        </ul>
+        <p>
+          Note: We met every week for progress check-ins, meeting reports, and
+          any major project changes.
+        </p>
       </section>
 
       <section class="content-section fade-in">
         <h2>Research and Stakeholder Insights</h2>
         <p>
-          We ran stakeholder interviews, surveys, and product research on apps
-          like Hinge and Coffee Meets Bagel. Conversations fade. People
-          overthink their profiles. Apps are designed around engagement, not
-          meeting in real life. We used that to position Serene: college
-          students 18 to 26, real profiles, meet IRL.
+          We talked to stakeholders, read survey responses, and reviewed other
+          dating apps such as Hinge and Coffee Meets Bagel. We saw repeated
+          problems: conversations fading, profiles that looked overly curated,
+          and product patterns that keep people in the app instead of helping
+          them meet in person. These early findings shaped the problems we
+          focused on in the rest of the project, including college-age users,
+          interest in more authentic profiles, and meeting in real life.
         </p>
 
-        <!-- IMAGE NEEDED: Survey/interview summary. Replace placeholder with <img src="assets/images/serene-fig-a1-research-summary.png" alt="..." loading="lazy"> -->
+        <p>
+          Figure A1 shows the main themes that appeared in our early
+          stakeholder research.
+        </p>
+        <p class="figure-title">Figure A1. Survey and interview summary on college dating behavior and expectations around meeting in person.</p>
         <figure class="artifact">
-          <div class="artifact-placeholder">[Placeholder: Survey/interview summary]</div>
-          <figcaption>Figure A1. Survey and interview summary on college dating behavior and trust.</figcaption>
+          <img
+            src="assets/images/Survey.png"
+            alt="Summary of survey and interview themes on college dating, chat fatigue, and meeting in person."
+            loading="lazy"
+            width="1200"
+            height="800"
+          />
         </figure>
+        <p class="survey-form-link">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdLYSl5632ZAH5thcM5c9L3_Oz2cRbZPhaQyQhQnV9qeUkBeA/viewform?usp=dialog"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Survey form</a>
+        </p>
         <p class="artifact-annotation">
-          The summary captured why people leave other apps: profiles that
-          feel too polished and chats that fizzle out. We used it to commit
-          to real photos in onboarding and to meeting in person as the main
-          goal. We kept these themes in mind when we made design and scope
-          decisions.
+          The summary started as raw notes from interviews and surveys and
+          got condensed into recurring complaints, like chats that fizzle and
+          profiles that feel too staged. When onboarding and scope questions
+          came up later, we reopened this sheet instead of re-arguing from
+          memory.
         </p>
 
-        <!-- IMAGE NEEDED: Competitive analysis table. Replace placeholder with <img src="assets/images/serene-fig-a2-competitive-analysis.png" alt="..." loading="lazy"> -->
+        <p>
+          Figure A2 shows the competitive comparison we used while deciding
+          what to prioritize against other dating apps.
+        </p>
+        <p class="figure-title">Figure A2. Competitive analysis across dating apps for the capstone.</p>
         <figure class="artifact">
-          <div class="artifact-placeholder">[Placeholder: Competitive analysis table]</div>
-          <figcaption>Figure A2. Competitive analysis of dating apps and Serene’s positioning.</figcaption>
+          <div class="comparison-table-wrap">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th scope="col">Aspect</th>
+                  <th scope="col">Hinge</th>
+                  <th scope="col">Coffee Meets Bagel</th>
+                  <th scope="col">Serene (our direction)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Profile style</td>
+                  <td>
+                    Prompt-led profiles and polished UI; still leans on quick
+                    appearance-based judgment.
+                  </td>
+                  <td>
+                    Curated profiles framed around quality over quantity.
+                  </td>
+                  <td>
+                    Polaroid-style capture aimed at a more immediate, less
+                    polished profile feel.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Chat behavior</td>
+                  <td>
+                    Chats often fade before people meet; messaging stays central.
+                  </td>
+                  <td>
+                    Slower, more intentional messaging; fewer daily connections.
+                  </td>
+                  <td>
+                    Lighter in-app chat; more emphasis on moving toward an IRL
+                    meet.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Real-life meeting focus</td>
+                  <td>
+                    Strong relationship branding, but the loop still spends a lot
+                    of time in the app.
+                  </td>
+                  <td>
+                    Geared toward serious dating and real-world intent.
+                  </td>
+                  <td>
+                    Explicit focus on meeting in person and shortening the path
+                    from match to showing up.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Spontaneity</td>
+                  <td>Feed-style browsing and steady swiping.</td>
+                  <td>
+                    More scheduled feel with limited daily picks; can feel less
+                    spontaneous.
+                  </td>
+                  <td>
+                    Location-based discovery when someone is nearby; more
+                    room for unplanned overlap on campus.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Pace</td>
+                  <td>Can feel fast and endless.</td>
+                  <td>Slower, more selective pacing.</td>
+                  <td>
+                    Aims for a pace that favors getting to an actual meet rather
+                    than long back-and-forth.
+                  </td>
+                </tr>
+                <tr>
+                  <td>College focus</td>
+                  <td>General audience.</td>
+                  <td>General audience.</td>
+                  <td>
+                    Positioned around college-age users, mutuals, and campus
+                    context in our planning.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Overall direction</td>
+                  <td>
+                    Prompts and matching tuned for relationships; chatting and
+                    profile polish stay central.
+                  </td>
+                  <td>
+                    Intentional, slower matching toward serious relationships.
+                  </td>
+                  <td>
+                    IRL-first dating with real profiles, nearby discovery, and
+                    friends or mutuals in scope—descriptive of what we aimed for,
+                    not proof it outperforms other apps.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </figure>
         <p class="artifact-annotation">
-          We compared incumbents on authenticity, location, and college focus.
-          The table justified our bet on real photos and proximity-based
-          discovery instead of copying swipe mechanics.
+          The comparison helped us decide which features to keep in scope and
+          which ones not to focus on for the first build. Earlier we had a
+          longer wish list; filling out the table forced us to rank what we
+          could actually touch in one quarter.
         </p>
       </section>
 
       <section class="content-section fade-in">
         <h2>MVP Scope and Product Decisions</h2>
         <p>
-          Our explicit goals: design and prototype the experience, build an
-          iOS app, validate with real college students. We used a waitlist
-          strategy and the dubmatch.com waitlist site. We mapped the full
-          user flow and kept scope tight: profile (Polaroid + basics),
-          discovery, match, one IRL meet with safety guardrails.
+          The full idea had to be narrowed into an MVP for one quarter. Our
+          goals included designing and prototyping the experience, building an
+          iOS app, and eventually checking the idea with college-age users. We
+          used a waitlist site at dubmatch.com for early signups. We created a
+          user flow to decide which parts of the experience belonged in the
+          MVP and which parts were left out. The main pieces we kept included
+          profile setup (Polaroid photo plus basics), discovery, matching, and
+          a first in-person meet with safety-related steps. We focused on the
+          parts needed to show the main idea and dropped deeper features, like
+          long in-app chat, that we could not finish in time.
         </p>
 
-        <!-- IMAGE NEEDED: MVP requirements snapshot. Replace placeholder with <img src="assets/images/serene-fig-b1-mvp-requirements.png" alt="..." loading="lazy"> -->
+        <p>
+          Figure B1 shows the MVP requirements list after we trimmed the
+          original plan to what we could build in one quarter.
+        </p>
+        <p class="figure-title">Figure B1. MVP requirements for discovery, matching, Polaroid onboarding, and safety.</p>
         <figure class="artifact">
-          <div class="artifact-placeholder">[Placeholder: MVP requirements snapshot]</div>
-          <figcaption>Figure B1. MVP requirements for discovery, matching, Polaroid onboarding, and safety.</figcaption>
+          <img
+            class="artifact-image artifact-image--mvp"
+            src="assets/images/mvprequire.png"
+            alt="MVP requirements list covering discovery, matching, Polaroid onboarding, and safety-related meet steps."
+            loading="lazy"
+            width="1200"
+            height="800"
+          />
         </figure>
         <p class="artifact-annotation">
-          The requirements doc was the single source of truth for what we
-          shipped. We cut in-app chat depth and kept the 30-minute meeting
-          window and QR check-in from the start.
+          Early drafts still listed heavier chat flows; later passes crossed
+          those out and spelled out the meet path, the 30-minute window, and
+          QR check-in so the written plan matched what we agreed to code.
         </p>
 
-        <!-- IMAGE NEEDED: User flow map. Replace placeholder with <img src="assets/images/serene-fig-b2-user-flow-map.png" alt="..." loading="lazy"> -->
+        <p>
+          Figure B2 shows the user flow we used to decide how the MVP would be
+          structured.
+        </p>
+        <p class="figure-title">Figure B2. User flow from sign-up through first IRL meet.</p>
         <figure class="artifact">
-          <div class="artifact-placeholder">[Placeholder: User flow map]</div>
-          <figcaption>Figure B2. User flow from sign-up through first IRL meet.</figcaption>
+          <div class="artifact-diagram-scroll">
+            <img
+              class="artifact-image artifact-image--large-diagram"
+              src="assets/images/user.png"
+              alt="User flow map from sign-up through discovery, match, and first in-person meet with safety steps."
+              loading="lazy"
+              width="1200"
+              height="800"
+            />
+          </div>
         </figure>
         <p class="artifact-annotation">
-          We mapped the full user flow so design and backend stayed aligned.
-          Location and notification permissions were explicit at each step.
-          Andriy used it to align API endpoints and safety checks.
+          The first sketch skipped some permission beats; we redrew the map
+          once the backend needed exact steps for location alerts and meet
+          state. That revision is what Andriy matched to endpoints and safety
+          checks.
         </p>
       </section>
 
       <section class="content-section fade-in">
         <h2>UI/UX Design in Figma (Justin)</h2>
-        <!-- COPY LOCK START: canonical -->
         <p>
-          Justin led the Figma UI/UX design: short steps so the flow never
-          felt overwhelming, clear rationale for location and notifications,
-          Polaroids, and a minimal interface designed to build trust without
-          extra friction.
-        </p>
-        <!-- COPY LOCK END: canonical -->
-
-        <!-- IMAGE NEEDED: Early wireframes vs refined screens. Replace placeholder with <img src="assets/images/serene-fig-c1-wireframes-vs-final.png" alt="..." loading="lazy"> -->
-        <figure class="artifact">
-          <div class="artifact-placeholder">[Placeholder: Early wireframes vs refined screens]</div>
-          <figcaption>Figure C1. Early wireframes compared to refined final screens.</figcaption>
-        </figure>
-        <p class="artifact-annotation">
-          Early wireframes had too many steps. The refined version collapsed
-          explanation and capture into a single sequence. The comparison
-          shows the pivot from explain everything to show once, then capture.
+          Justin worked in Figma from early wireframes and rough flows through
+          later, clearer screens. The first passes had too many steps. Over
+          time we reduced the number of screens, cleaned up onboarding so it
+          was easier to follow, and moved toward a simpler black-and-white
+          layout.
         </p>
 
-        <!-- IMAGE NEEDED: Onboarding trust flow (location/notifications + Polaroids). Replace placeholder with <img src="assets/images/serene-fig-c2-onboarding-trust-flow.png" alt="..." loading="lazy"> -->
+        <p>
+          Figure C1 compares early UI ideas with the later Figma screens.
+        </p>
+        <p class="figure-title">Figure C1. Early wireframes compared to refined final screens.</p>
         <figure class="artifact">
-          <div class="artifact-placeholder">[Placeholder: Onboarding trust flow (location/notifications + Polaroids)]</div>
-          <figcaption>Figure C2. Onboarding trust flow: location/notifications and Polaroid capture.</figcaption>
+          <div class="figure-gallery figure-gallery--compare">
+            <div class="figure-gallery__item">
+              <img
+                src="assets/images/early.png"
+                alt="Early Serene wireframes with rough layout and extra onboarding steps."
+                loading="lazy"
+                width="600"
+                height="1200"
+              />
+            </div>
+            <div class="figure-gallery__item">
+              <img
+                src="assets/images/new.png"
+                alt="Refined Figma screens with simplified onboarding and clearer black-and-white UI."
+                loading="lazy"
+                width="600"
+                height="1200"
+              />
+            </div>
+          </div>
         </figure>
         <p class="artifact-annotation">
-          This flow explained why location and notifications were needed and
-          placed the Polaroid step so users understood why a real photo
-          mattered. The flow was designed to build trust. We kept it in the
-          SwiftUI build with minimal change.
+          The earlier screens spent more time explaining the process, while
+          the later version reduced the number of steps and made the onboarding
+          flow shorter. Side-by-side, you can see which screens we cut and
+          which ones stayed.
+        </p>
+
+        <p>
+          Figure C2 shows three onboarding screens in order: location
+          permission, notifications, and the Polaroid capture step.
+        </p>
+        <p class="figure-title">Figure C2. Onboarding flow: location, notifications, and Polaroid capture.</p>
+        <figure class="artifact">
+          <div class="figure-gallery figure-gallery--triple">
+            <div class="figure-gallery__item">
+              <img
+                src="assets/images/location.png"
+                alt="Serene onboarding: location permission screen."
+                loading="lazy"
+                width="390"
+                height="844"
+              />
+            </div>
+            <div class="figure-gallery__item">
+              <img
+                src="assets/images/noti.png"
+                alt="Serene onboarding: notification permission screen."
+                loading="lazy"
+                width="390"
+                height="844"
+              />
+            </div>
+            <div class="figure-gallery__item">
+              <img
+                src="assets/images/cam.png"
+                alt="Serene onboarding: Polaroid camera capture screen."
+                loading="lazy"
+                width="390"
+                height="844"
+              />
+            </div>
+          </div>
+        </figure>
+        <p class="artifact-annotation">
+          This flow changed over time as we tried to make the permission steps
+          easier to understand and to show where the Polaroid capture landed.
+          The SwiftUI build tracked the revised order with only small tweaks.
         </p>
       </section>
 
       <section class="content-section fade-in">
         <h2>iOS Frontend Implementation (SwiftUI) (Justin)</h2>
-        <!-- COPY LOCK START: canonical -->
         <p>
-          Justin led the SwiftUI frontend and Apple Maps integration. The app
-          used reusable UI patterns, stayed iOS-native, and followed Apple HCI
-          guidance (including liquid glass where it fit). We wired it to the
-          backend API.
-        </p>
-        <!-- COPY LOCK END: canonical -->
-
-        <!-- IMAGE NEEDED: SwiftUI navigation/state architecture diagram or code screenshot. Replace placeholder with <img src="assets/images/serene-fig-d1-swiftui-architecture.png" alt="..." loading="lazy"> -->
-        <figure class="artifact">
-          <div class="artifact-placeholder">[Placeholder: SwiftUI navigation/state architecture diagram or code screenshot]</div>
-          <figcaption>Figure D1. SwiftUI navigation and state architecture, or code screenshot showing view structure.</figcaption>
-        </figure>
-        <p class="artifact-annotation">
-          Navigation and state were structured around discovery, profile, and
-          meet flow. The separation made it easier to plug in API calls and
-          location updates. We refactored once when the meet flow gained
-          states like pending, confirmed, expired.
+          Justin translated the Figma flows into SwiftUI screens. The work
+          included navigation between sections, state handling, reusable
+          components, MapKit for maps, and wiring views to the backend API as
+          endpoints became available. We followed Apple’s UI guidance where it
+          helped, including liquid glass in places that did not hurt
+          readability.
         </p>
 
-        <!-- IMAGE NEEDED: Apple Maps integration screen. Replace placeholder with <img src="assets/images/serene-fig-d2-apple-maps-screen.png" alt="..." loading="lazy"> -->
+        <p>
+          Figure D1 shows SwiftUI code that reflects how we organized the
+          frontend structure.
+        </p>
+        <p class="figure-title">Figure D1. SwiftUI code structure for navigation and state.</p>
         <figure class="artifact">
-          <div class="artifact-placeholder">[Placeholder: Apple Maps integration screen]</div>
-          <figcaption>Figure D2. Apple Maps integration for discovery and meet guidance.</figcaption>
+          <img
+            src="assets/images/code.png"
+            alt="Xcode screenshot of SwiftUI views, navigation, and state-related code for Serene."
+            loading="lazy"
+            width="1200"
+            height="800"
+          />
         </figure>
         <p class="artifact-annotation">
-          Apple Maps showed nearby users (within the backend radius) and
-          supported the meet IRL step with directions. The team balanced
-          privacy (no persistent precise location) with enough detail for
-          who is around and meet confirmation.
+          We first grouped screens loosely, then split meet-related state when
+          the API started returning pending, confirmed, and expired outcomes.
+          That refactor is visible in how navigation and state are separated
+          in the diagram.
+        </p>
+
+        <p>
+          Figure D2 shows the map screen tied to discovery and meeting
+          directions as the frontend came together.
+        </p>
+        <p class="figure-title">Figure D2. Apple Maps integration for discovery and meet guidance.</p>
+        <figure class="artifact">
+          <img
+            src="assets/images/apple.png"
+            alt="Serene screen showing Apple Maps for discovery or directions during a meet."
+            loading="lazy"
+            width="390"
+            height="844"
+          />
+        </figure>
+        <p class="artifact-annotation">
+          An early prototype asked the client to hold more precise location
+          detail than we wanted to keep on device. After syncing with the
+          backend, we dialed back what the map showed while still supporting
+          the meet step with directions.
         </p>
       </section>
 
       <section class="content-section fade-in">
         <h2>Backend Architecture and Data (Flask + Supabase) (Andriy)</h2>
-        <!-- COPY LOCK START: canonical -->
         <p>
-          Andriy led the Flask API and Supabase data model. The architecture
-          supported auth, profiles, matches, and meeting/safety data. We
-          aligned on request/response shapes early so the iOS client could
-          integrate without guesswork.
-        </p>
-        <!-- COPY LOCK END: canonical -->
-
-        <!-- IMAGE NEEDED: API architecture diagram. Replace placeholder with <img src="assets/images/serene-fig-e1-backend-architecture.png" alt="..." loading="lazy"> -->
-        <figure class="artifact">
-          <div class="artifact-placeholder">[Placeholder: API architecture diagram]</div>
-          <figcaption>Figure E1. Backend API architecture (Flask, Supabase, client).</figcaption>
-        </figure>
-        <p class="artifact-annotation">
-          The diagram showed which endpoints handled discovery, matching, and
-          meet lifecycle. We added safety-related endpoints after locking the
-          core flows and updated the diagram to match.
+          Andriy built the Flask API and the Supabase-backed data model. The
+          backend covered authentication, profiles, matches, and data for
+          meetings and safety-related fields. The team shared draft request
+          and response shapes so the iOS side could match the same structure.
         </p>
 
-        <!-- IMAGE NEEDED: Database schema/UML. Replace placeholder with <img src="assets/images/serene-fig-e2-database-schema.png" alt="..." loading="lazy"> -->
+        <p>
+          Figure E1 shows the API layout after we iterated on which routes the
+          iOS app needed.
+        </p>
+        <p class="figure-title">Figure E1. Backend API architecture (Flask, Supabase, client).</p>
         <figure class="artifact">
-          <div class="artifact-placeholder">[Placeholder: Database schema/UML]</div>
-          <figcaption>Figure E2. Database schema for users, profiles, matches, and meeting/safety.</figcaption>
+          <div class="artifact-diagram-scroll">
+            <img
+              class="artifact-image artifact-image--large-diagram"
+              src="assets/images/SystemArchitectural.png"
+              alt="System architecture diagram: iOS client, Flask API, and Supabase database."
+              loading="lazy"
+              width="1200"
+              height="800"
+            />
+          </div>
         </figure>
         <p class="artifact-annotation">
-          The schema made match and meeting state explicit (time window,
-          check-in status). It supported the proximity engine and the safety
-          flow. We kept migrations minimal.
+          The first sketch only listed discovery and match paths. Safety and
+          meet lifecycle endpoints were penciled in later, and the diagram was
+          redrawn each time the contract with the client changed.
+        </p>
+
+        <p>
+          Figure E2 shows the database structure used to support profiles,
+          matches, and meetings.
+        </p>
+        <p class="figure-title">Figure E2. Database schema for users, profiles, matches, and meeting/safety.</p>
+        <figure class="artifact">
+          <img
+            src="assets/images/data.png"
+            alt="Database schema diagram for users, profiles, matches, meetings, and safety-related fields."
+            loading="lazy"
+            width="1200"
+            height="800"
+          />
+        </figure>
+        <p class="artifact-annotation">
+          Early drafts omitted explicit fields for meet expiry and check-in
+          status. We added those columns once the safety flow was clearer, and
+          we kept migrations small so the schema did not churn every week.
+        </p>
+
+        <p>
+          Figure E3 shows how we sketched a typical path from an app request
+          through the backend to a response while we were aligning contracts
+          with the iOS client.
+        </p>
+        <p class="figure-title">
+          Figure E3. Backend user journey from request flow to system response.
+        </p>
+        <figure class="artifact">
+          <div class="artifact-diagram-scroll">
+            <img
+              class="artifact-image artifact-image--large-diagram"
+              src="assets/images/BackendJourney.png"
+              alt="Diagram of backend user journey from client request through API and data layers to response."
+              loading="lazy"
+              width="1200"
+              height="800"
+            />
+          </div>
+        </figure>
+        <p class="artifact-annotation">
+          We drew this mid-quarter when we were deciding what the server should
+          own versus what the app should handle before wiring endpoints. It
+          became a reference during integration when meet and match states
+          changed, and revisiting it helped catch a few mismatches between client
+          expectations and the API shape we had documented.
         </p>
       </section>
 
       <section class="content-section fade-in">
         <h2>Matchmaking, Proximity Engine, and Safety (Backend + Product)</h2>
-        <!-- COPY LOCK START: canonical -->
         <p>
-          Andriy led the proximity engine (Haversine) and match score logic
-          with dealbreakers. Product and backend agreed on radius and refresh
-          behavior. Safety: 30-minute meeting window, QR check-in, and
-          expiration so both sides have a clear, bounded frame.
-        </p>
-        <!-- COPY LOCK END: canonical -->
-
-        <!-- IMAGE NEEDED: Proximity engine diagram/pseudocode. Replace placeholder with <img src="assets/images/serene-fig-f1-proximity-engine.png" alt="..." loading="lazy"> -->
-        <figure class="artifact">
-          <div class="artifact-placeholder">[Placeholder: Proximity engine diagram/pseudocode]</div>
-          <figcaption>Figure F1. Proximity engine (Haversine): diagram or pseudocode for location-based discovery.</figcaption>
-        </figure>
-        <p class="artifact-annotation">
-          Haversine gave us who is nearby at campus scale without heavy GIS.
-          We tuned the radius and how often the client refreshed. The diagram
-          is the reference for the logic.
+          This part of the project covered logic for nearby matching and the
+          product rules we aligned on for real-life meets, including a
+          30-minute window, QR check-in, and expiration for pending meets.
+          Andriy implemented proximity using Haversine distance plus match
+          scoring with dealbreakers. Product and backend agreed on radius and
+          how often the client should refresh location.
         </p>
 
-        <!-- IMAGE NEEDED: Safety flow diagram (30-min window + QR check-in + expiration). Replace placeholder with <img src="assets/images/serene-fig-f2-safety-flow.png" alt="..." loading="lazy"> -->
+        <p>
+          Figure F1 shows pseudocode we wrote while tuning discovery and mutual
+          matching: bounding-box and Haversine distance, filters, compatibility
+          scoring, and the swipe-to-match path including distance and invite
+          timing.
+        </p>
+        <p class="figure-title">
+          Figure F1. Pseudocode: matchmaking and proximity engine, plus swipe to
+          match.
+        </p>
         <figure class="artifact">
-          <div class="artifact-placeholder">[Placeholder: Safety flow diagram (30-min window + QR check-in + expiration)]</div>
-          <figcaption>Figure F2. Safety flow: 30-minute window, QR check-in, and expiration.</figcaption>
+          <div
+            class="artifact-pseudocode"
+            role="group"
+            aria-label="Pseudocode for matchmaking, proximity discovery, and swipe to match"
+          >
+            <div class="pseudocode-block">
+              <p class="pseudocode-heading">Matchmaking + Proximity Engine</p>
+              <p class="pseudocode-line pseudocode-input">
+                <span class="pseudocode-kw">Input:</span> user_id, lat, lng,
+                radius_miles
+              </p>
+              <ol class="pseudocode-steps">
+                <li>Query nearby profiles with a bounding-box filter.</li>
+                <li>
+                  Exclude:
+                  <ul class="pseudocode-sub">
+                    <li>current user</li>
+                    <li>blocked users (both directions)</li>
+                    <li>already swiped users</li>
+                    <li>users with location sharing off/expired</li>
+                  </ul>
+                </li>
+                <li>Compute exact distance with haversine.</li>
+                <li>
+                  Apply filters:
+                  <ul class="pseudocode-sub">
+                    <li>age 18&ndash;27</li>
+                    <li>dealbreakers (age, distance, height, preferences)</li>
+                    <li>at least 5 photos</li>
+                  </ul>
+                </li>
+                <li>Compute compatibility score per profile.</li>
+                <li>
+                  Sort by compatibility_score (desc), distance_miles (asc).
+                </li>
+                <li>
+                  Return discovery profiles with photos, distance,
+                  compatibility_score.
+                </li>
+              </ol>
+            </div>
+            <div class="pseudocode-block">
+              <p class="pseudocode-heading">Swipe to Match</p>
+              <p class="pseudocode-line pseudocode-input">
+                <span class="pseudocode-kw">Input:</span> from_profile_id,
+                to_profile_id, action
+              </p>
+              <ol class="pseudocode-steps">
+                <li>Insert or update swipe record.</li>
+                <li>If action != like: return matched = false.</li>
+                <li>Check reverse like (to &rarr; from).</li>
+                <li>
+                  If reverse like exists:
+                  <ul class="pseudocode-sub">
+                    <li>enforce distance &lt;= 1.0 mile</li>
+                    <li>create match using ordered profile ids</li>
+                    <li>set invite_expires_at = now + 5 minutes</li>
+                    <li>return matched = true, match_id</li>
+                  </ul>
+                </li>
+                <li>Otherwise return matched = false.</li>
+              </ol>
+            </div>
+          </div>
         </figure>
         <p class="artifact-annotation">
-          The flow made the meeting window and check-in mandatory so both
-          parties opt in. Expiration cleared stale pending states. We kept
-          the description factual and did not over-claim.
+          The radius and refresh numbers on the page are not the first values
+          we tried. We adjusted them after walking through campus-scale
+          distances and watching how noisy updates felt on the client.
         </p>
       </section>
 
@@ -355,9 +703,9 @@
         </p>
 
         (IMAGE NEEDED: Integration checklist or TestFlight submission screenshot. Replace placeholder with img)
+        <p class="figure-title">Figure G1. Integration checklist and TestFlight submission.</p>
         <figure class="artifact">
           <div class="artifact-placeholder">[Placeholder: Integration checklist or TestFlight submission screenshot]</div>
-          <figcaption>Figure G1. Integration checklist and TestFlight submission.</figcaption>
         </figure>
         <p class="artifact-annotation">
           The checklist covered auth, discovery, match, meet, and safety so we
@@ -366,9 +714,9 @@
         </p>
 
         (IMAGE NEEDED: Beta feedback summary + iteration notes. Replace placeholder with img)
+        <p class="figure-title">Figure G2. Beta feedback summary and iteration notes.</p>
         <figure class="artifact">
           <div class="artifact-placeholder">[Placeholder: Beta feedback summary + iteration notes]</div>
-          <figcaption>Figure G2. Beta feedback summary and iteration notes.</figcaption>
         </figure>
         <p class="artifact-annotation">
           Testers said Polaroid and the meet flow felt different from typical

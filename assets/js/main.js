@@ -97,6 +97,13 @@
   /* --- Scroll-Reveal Animation --- */
   var fadeEls = document.querySelectorAll(".fade-in");
 
+  function isRoughlyInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    // Treat as "above the fold" so hero copy animates immediately (no flash of hidden text)
+    return rect.top < vh * 0.92 && rect.bottom > 0;
+  }
+
   if (fadeEls.length && "IntersectionObserver" in window) {
     var observer = new IntersectionObserver(
       function (entries) {
@@ -107,11 +114,20 @@
           }
         });
       },
-      { threshold: 0.15 },
+      { threshold: 0.12, rootMargin: "0px 0px 8% 0px" },
     );
 
     fadeEls.forEach(function (el) {
-      observer.observe(el);
+      if (isRoughlyInViewport(el)) {
+        // Two rAFs so the first paint uses opacity 0, then transition runs to visible
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            el.classList.add("is-visible");
+          });
+        });
+      } else {
+        observer.observe(el);
+      }
     });
   } else {
     // Fallback: just show everything
@@ -119,4 +135,74 @@
       el.classList.add("is-visible");
     });
   }
+
+  /* --- Meet flow carousel (User page, Figure 2) --- */
+  (function initMeetFlowCarousel() {
+    var root = document.querySelector("[data-meet-flow-carousel]");
+    if (!root) return;
+
+    var slides = [
+      {
+        src: "assets/images/d.png",
+        alt: "Meet flow step 1 of 7: nearby match notification.",
+      },
+      {
+        src: "assets/images/e.png",
+        alt: "Meet flow step 2 of 7: reviewing match details.",
+      },
+      {
+        src: "assets/images/f.png",
+        alt: "Meet flow step 3 of 7: deciding to meet.",
+      },
+      {
+        src: "assets/images/g.png",
+        alt: "Meet flow step 4 of 7: meet request or timing.",
+      },
+      {
+        src: "assets/images/h.png",
+        alt: "Meet flow step 5 of 7: map or directions.",
+      },
+      {
+        src: "assets/images/i.png",
+        alt: "Meet flow step 6 of 7: approaching check-in.",
+      },
+      {
+        src: "assets/images/j.png",
+        alt: "Meet flow step 7 of 7: QR check-in or meet confirmation.",
+      },
+    ];
+
+    var img = root.querySelector(".meet-flow-carousel__img");
+    var statusEl = root.querySelector(".meet-flow-carousel__status");
+    var prevBtn = root.querySelector("[data-carousel-prev]");
+    var nextBtn = root.querySelector("[data-carousel-next]");
+    if (!img || !statusEl || !prevBtn || !nextBtn) return;
+
+    var index = 0;
+
+    function show() {
+      var s = slides[index];
+      img.src = s.src;
+      img.alt = s.alt;
+      statusEl.textContent = "Step " + (index + 1) + " of " + slides.length;
+      prevBtn.disabled = index === 0;
+      nextBtn.disabled = index === slides.length - 1;
+    }
+
+    prevBtn.addEventListener("click", function () {
+      if (index > 0) {
+        index -= 1;
+        show();
+      }
+    });
+
+    nextBtn.addEventListener("click", function () {
+      if (index < slides.length - 1) {
+        index += 1;
+        show();
+      }
+    });
+
+    show();
+  })();
 })();
